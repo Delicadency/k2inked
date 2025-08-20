@@ -1,0 +1,27 @@
+import { cn } from "@/utils";
+import Image, { ImageProps } from "next/image";
+
+type BackgroundImageProps = ImageProps & {
+  classname?: string;
+  children?: React.ReactNode;
+};
+
+export const BackgroundImage = ({
+  src,
+  alt,
+  className,
+  children,
+  ...props
+}: BackgroundImageProps) => (
+  <div className="relative h-screen w-screen overflow-hidden">
+    <Image
+      src={src}
+      alt={alt}
+      quality={100}
+      fill
+      className={cn("object-cover", className)}
+      {...props}
+    />
+    <div className="relative z-10">{children}</div>
+  </div>
+);
