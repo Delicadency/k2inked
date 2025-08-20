@@ -31,7 +31,7 @@ export default function RootLayout({
         className={cn(
           inconsolata.variable,
           marcellusSC.variable,
-          "antialiased flex min-h-screen flex-col"
+          "flex min-h-screen flex-col antialiased",
         )}
       >
         <main className="flex-grow">{children}</main>
