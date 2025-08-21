@@ -6,5 +6,6 @@ export const K2INKED_DATA = {
   socialMedia: {
     facebook: "",
     instagram: "https://www.instagram.com/k2.inked",
+    tiktok: "",
   },
 } as const;
