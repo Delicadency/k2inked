@@ -22,7 +22,7 @@ const preventIfDisabledAnchor =
   };
 
 export function Button(props: ButtonProps) {
-  const { children, variant, className, as = "button", ...rest } = props;
+  const { children, ariaLabel, variant, className, as = "button", ...rest } = props;
   const cls = cn(base, variants[variant], className);
 
   const content = (
@@ -47,6 +47,7 @@ export function Button(props: ButtonProps) {
           className={cls}
           aria-disabled={disabled}
           data-disabled={disabled}
+          aria-label={ariaLabel}
           {...anchorProps}
         >
           {content}
@@ -61,6 +62,7 @@ export function Button(props: ButtonProps) {
         className={cls}
         aria-disabled={disabled}
         data-disabled={disabled}
+        aria-label={ariaLabel}
         {...anchorProps}
       >
         {content}
@@ -68,13 +70,14 @@ export function Button(props: ButtonProps) {
     );
   }
 
-  const { type = "button", onClick, disabled, ...buttonProps } = rest as ButtonFlavor;
+  const { type = "button", onClick,  disabled, ...buttonProps } = rest as ButtonFlavor;
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
       className={cls}
+      aria-label={ariaLabel}
       {...buttonProps}
     >
       {content}

@@ -12,6 +12,7 @@ export type CommonProps = {
   className?: string;
   variant: Variant;
   as?: "button" | "a";
+  ariaLabel: string;
 };
 
 export type ButtonFlavor = {
