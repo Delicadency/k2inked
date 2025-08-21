@@ -1,0 +1,83 @@
+import Link from "next/link";
+import type { MouseEventHandler } from "react";
+import { cn } from "@/utils";
+import { base, variants } from "./ButtonStyles";
+import { FrameFX } from "./ButtonAnimation";
+import type {
+  ButtonProps,
+  ButtonFlavor,
+  InternalAnchor,
+  ExternalAnchor,
+} from "./ButtonTypes";
+
+const preventIfDisabledAnchor =
+  (disabled?: boolean, handler?: MouseEventHandler<HTMLAnchorElement>) =>
+  (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    handler?.(e);
+  };
+
+export function Button(props: ButtonProps) {
+  const { children, variant, className, as = "button", ...rest } = props;
+  const cls = cn(base, variants[variant], className);
+
+  const content = (
+    <>
+      <span className="relative z-10 tracking-[0.15em]">{children}</span>
+      <FrameFX />
+    </>
+  );
+
+  if (as === "a") {
+    const { href, onClick, disabled, ...anchorProps } = rest as InternalAnchor | ExternalAnchor;
+
+    const isExternal =
+      typeof href === "string" &&
+      (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:"));
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          onClick={preventIfDisabledAnchor(disabled, onClick)}
+          className={cls}
+          aria-disabled={disabled}
+          data-disabled={disabled}
+          {...anchorProps}
+        >
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <Link
+        href={href as InternalAnchor["href"]}
+        onClick={preventIfDisabledAnchor(disabled, onClick)}
+        className={cls}
+        aria-disabled={disabled}
+        data-disabled={disabled}
+        {...anchorProps}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  const { type = "button", onClick, disabled, ...buttonProps } = rest as ButtonFlavor;
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={cls}
+      {...buttonProps}
+    >
+      {content}
+    </button>
+  );
+}
