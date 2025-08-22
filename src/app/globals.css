@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@source "./stories/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./stories/**/*.{js,ts,jsx,tsx,mdx}" "./components/**/*.{js,ts,jsx,tsx,mdx}" "./stories/**/*.{js,ts,jsx,tsx,mdx}";
 
 @theme {
   --color-light: #f5f5f5;
@@ -28,19 +28,29 @@
     margin: 0;
     padding: 0;
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    color: inherit;
+    text-underline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .link-hover {
+    @apply transition duration-300;
+  }
+  .link-hover:hover {
+    @apply !text-primary;
+  } /* add ! to reliably beat other hover colors */
 }
 
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-a {
-  color: inherit;
-  text-underline-offset: 2px;
 }

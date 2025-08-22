@@ -3,13 +3,13 @@ import { IconInstagram } from "@/icons/IconInstagram";
 import { IconTiktok } from "@/icons/IconTiktok";
 import { K2INKED_DATA } from "@/data/k2Data";
 
-type Props = {
-  size: number;
-  color: "light" | "primary";
+export type SocialmediaLinkProps = {
+  size?: number;
+  iconClassName?: string;
 };
 
 export const SocialmediaLink = {
-  Facebook: ({ size, color }: Props) => (
+  Facebook: ({ size, iconClassName = "" }: SocialmediaLinkProps) => (
     <a
       href={K2INKED_DATA.socialMedia.facebook}
       title="Facebook"
@@ -18,11 +18,11 @@ export const SocialmediaLink = {
       rel="noopener noreferrer"
       className="transition-opacity hover:opacity-80"
     >
-      <IconFacebook classname={`text-${color}`} size={size} />
+      <IconFacebook classname={iconClassName} size={size} />
     </a>
   ),
 
-  Instagram: ({ size, color }: Props) => (
+  Instagram: ({ size, iconClassName = "" }: SocialmediaLinkProps) => (
     <a
       href={K2INKED_DATA.socialMedia.instagram}
       title="Instagram"
@@ -31,10 +31,10 @@ export const SocialmediaLink = {
       rel="noopener noreferrer"
       className="transition-opacity hover:opacity-80"
     >
-      <IconInstagram classname={`text-${color}`} size={size} />
+      <IconInstagram classname={iconClassName} size={size} />
     </a>
   ),
-  Tiktok: ({ size, color }: Props) => (
+  Tiktok: ({ size, iconClassName = "" }: SocialmediaLinkProps) => (
     <a
       href={K2INKED_DATA.socialMedia.tiktok}
       title="Tiktok"
@@ -43,7 +43,7 @@ export const SocialmediaLink = {
       rel="noopener noreferrer"
       className="transition-opacity hover:opacity-80"
     >
-      <IconTiktok classname={`text-${color}`} size={size} />
+      <IconTiktok classname={iconClassName} size={size} />
     </a>
   ),
 };

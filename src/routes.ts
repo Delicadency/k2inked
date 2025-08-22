@@ -4,7 +4,6 @@ export const Routes = {
   REGULATIONS: "/regulamin",
   POLICY: "/polityka-prywatnosci",
   CONTACT: "/kontakt",
-  
 } as const;
 
 export type RouteKeys = keyof typeof Routes;

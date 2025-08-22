@@ -1,14 +1,17 @@
-import { SocialmediaLink } from "./SocialMediaLink";
+import { SocialmediaLink, SocialmediaLinkProps } from "./SocialMediaLink";
 
-type TrayProps = {
-  className: string;
-  size: number;
+type TrayProps = SocialmediaLinkProps & {
+  navClassName?: string;
 };
 
-export const SocialmediaTray = ({ className, size }: TrayProps) => (
-  <nav className={className}>
-    <SocialmediaLink.Facebook size={size} color="light" />
-    <SocialmediaLink.Instagram size={size} color="light" />
-    <SocialmediaLink.Tiktok size={size} color="light" />
+export const SocialmediaTray = ({
+  navClassName = "",
+  size = 30,
+  iconClassName = ""
+}: TrayProps) => (
+  <nav className={navClassName}>
+    <SocialmediaLink.Facebook size={size} iconClassName={iconClassName} />
+    <SocialmediaLink.Instagram size={size} iconClassName={iconClassName} />
+    <SocialmediaLink.Tiktok size={size} iconClassName={iconClassName} />
   </nav>
 );
