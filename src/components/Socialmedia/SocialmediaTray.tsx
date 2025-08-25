@@ -12,6 +12,6 @@ export const SocialmediaTray = ({
   <nav className={navClassName}>
     <SocialmediaLink.Facebook size={size} iconClassName={iconClassName} />
     <SocialmediaLink.Instagram size={size} iconClassName={iconClassName} />
-    <SocialmediaLink.Tiktok size={size} iconClassName={iconClassName} />
+    {/* <SocialmediaLink.Tiktok size={size} iconClassName={iconClassName} /> */}
   </nav>
 );
