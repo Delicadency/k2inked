@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { cn } from "@/utils";
 import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/Footer/Footer";
+import { HeaderMobile } from "@/components/Header/HeaderMobile";
 
 const inconsolata = localFont({
   src: "./Fonts/Inconsolata.woff2",
@@ -35,6 +36,7 @@ export default function RootLayout({
           "font-inconsolata text-dark flex min-h-screen flex-col antialiased",
         )}
       >
+        <HeaderMobile />
         <main className="flex-grow">{children}</main>
         <Footer />
         <Analytics />
