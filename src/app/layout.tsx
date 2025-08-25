@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { cn } from "@/utils";
 import { Analytics } from "@vercel/analytics/next";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer/Footer";
 
 const inconsolata = localFont({
   src: "./Fonts/Inconsolata.woff2",
