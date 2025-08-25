@@ -34,7 +34,7 @@ export const Button = (props: ButtonProps) => {
 
   const content = (
     <>
-      <span className="relative z-10 tracking-[0.15em]">{children}</span>
+      <span className="relative z-10 tracking-[0.15em] text-center">{children}</span>
       <ButtonAnimation />
     </>
   );

@@ -2,7 +2,7 @@ import type { Variant } from "./ButtonTypes";
 
 export const base =
   "group relative inline-flex items-center justify-center select-none cursor-pointer " +
-  "px-8 py-2 uppercase text-xs tablet:text-lg font-inconsolata " +
+  "px-8 py-2 uppercase text-xs tablet:text-lg font-inconsolata min-w-34 tablet:min-w-51 " +
   "transition-all duration-200 ease-out transform-gpu will-change-transform " +
   "outline-none overflow-hidden " +
   "focus-visible:ring-2 focus-visible:ring-light/70 focus-visible:ring-offset-2 focus-visible:ring-offset-dark " +

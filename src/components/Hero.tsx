@@ -12,21 +12,20 @@ export const Hero = () => (
     alt="Zdjęcie przedstawiające tatuaż w trakcie wykonywania"
     priority
   >
-    <section className="tablet:h-[100vh] tablet:w-full flex min-h-[100svh] w-full flex-col items-center justify-center">
-      <LogoK2Inked classname="text-light max-w-[80vw] mobile:max-w-[70vw] tablet:max-w-[500px]" />
+    <section className="flex min-h-[100svh] w-full flex-col items-center justify-center px-[10vw]">
+      <LogoK2Inked classname="text-light h-[50vh] desktop:h-[600px] tablet:max-w-[500px]" />
       <Heading tag="h1" variant="light">
         K2.inked
       </Heading>
-      <Heading tag="h3" variant="light">
+      <Heading tag="h3" variant="light" className="text-center">
         Studio w sercu Warszawy
       </Heading>
-      <div className="tablet:gap-45 tablet:pt-18 flex flex-row gap-[20vw] pt-13.5">
+      <div className="tablet:gap-45 tablet:py-18 flex flex-row gap-[20vw] py-13.5">
         <Button
           variant="light"
           ariaLabel="Kliknij, by przejść do strony z formularzem kontaktowym"
           as="a"
           href={Routes.CONTACT}
-          className="tablet:w-51 w-25.5"
         >
           Umów się
         </Button>
