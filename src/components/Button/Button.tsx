@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { MouseEventHandler } from "react";
 import { cn } from "@/utils";
 import { base, variants } from "./ButtonStyles";
-import { FrameFX } from "./ButtonAnimation";
+import { ButtonAnimation } from "./ButtonAnimation";
 import type {
   ButtonProps,
   ButtonFlavor,
@@ -21,23 +21,34 @@ const preventIfDisabledAnchor =
     handler?.(e);
   };
 
-export function Button(props: ButtonProps) {
-  const { children, ariaLabel, variant, className, as = "button", ...rest } = props;
+export const Button = (props: ButtonProps) => {
+  const {
+    children,
+    ariaLabel,
+    variant,
+    className,
+    as = "button",
+    ...rest
+  } = props;
   const cls = cn(base, variants[variant], className);
 
   const content = (
     <>
       <span className="relative z-10 tracking-[0.15em]">{children}</span>
-      <FrameFX />
+      <ButtonAnimation />
     </>
   );
 
   if (as === "a") {
-    const { href, onClick, disabled, ...anchorProps } = rest as InternalAnchor | ExternalAnchor;
+    const { href, onClick, disabled, ...anchorProps } = rest as
+      | InternalAnchor
+      | ExternalAnchor;
 
     const isExternal =
       typeof href === "string" &&
-      (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:"));
+      (href.startsWith("http") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:"));
 
     if (isExternal) {
       return (
@@ -70,7 +81,12 @@ export function Button(props: ButtonProps) {
     );
   }
 
-  const { type = "button", onClick,  disabled, ...buttonProps } = rest as ButtonFlavor;
+  const {
+    type = "button",
+    onClick,
+    disabled,
+    ...buttonProps
+  } = rest as ButtonFlavor;
   return (
     <button
       type={type}
@@ -83,4 +99,4 @@ export function Button(props: ButtonProps) {
       {content}
     </button>
   );
-}
+};
