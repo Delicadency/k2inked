@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Routes } from "@/routes";
+import { STATIC_ROUTES } from "@/routes";
 
 export const Attribution = () => (
   <section className="desktop:flex-row desktop:inline-flex tablet:gap-1 tablet:text-sm flex flex-col items-center gap-3 text-[3vw]">
@@ -7,7 +7,7 @@ export const Attribution = () => (
       &copy; <time dateTime="2025">2025</time>{" "}
       <strong>
         <Link
-          href={Routes.HOME}
+          href={STATIC_ROUTES.HOME}
           aria-label="Przejdź do strony głównej salonu K2.INKED"
           className="link-hover"
         >

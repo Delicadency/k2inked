@@ -3,7 +3,7 @@ import type {
   MouseEventHandler,
   ReactNode,
 } from "react";
-import type { RouteValues } from "@/routes";
+import type { InternalHref} from "@/routes";
 
 export type Variant = "light" | "lightTrans" | "primary" | "primaryTrans";
 
@@ -27,7 +27,7 @@ export type ButtonFlavor = {
 
 export type InternalAnchor = {
   as: "a";
-  href: RouteValues;
+  href: InternalHref;
   target?: "_self";
   rel?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;

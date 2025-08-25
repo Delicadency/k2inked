@@ -4,7 +4,7 @@ import { LogoK2Inked } from "@/icons/LogoK2Inked";
 import { BackgroundImage } from "./BackgroundImage";
 import { Heading } from "./Heading";
 import { Button } from "./Button/Button";
-import { Routes } from "@/routes";
+import { STATIC_ROUTES } from "@/routes";
 
 export const Hero = () => (
   <BackgroundImage
@@ -25,7 +25,7 @@ export const Hero = () => (
           variant="light"
           ariaLabel="Kliknij, by przejść do strony z formularzem kontaktowym"
           as="a"
-          href={Routes.CONTACT}
+          href={STATIC_ROUTES.CONTACT}
         >
           Umów się
         </Button>
@@ -33,7 +33,7 @@ export const Hero = () => (
           variant="lightTrans"
           ariaLabel="Kliknij, by przejść do galerii prac"
           as="a"
-          href={Routes.GALLERY}
+          href={STATIC_ROUTES.GALLERY}
         >
           Zobacz prace
         </Button>
