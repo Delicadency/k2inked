@@ -3,6 +3,6 @@ import { HeaderMobile } from "./__mobile/HeaderMobile";
 
 export const Header = () => (
   <div>
-    <HeaderMobile />
+    <HeaderMobile  />
   </div>
 );

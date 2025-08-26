@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { BurgerButton } from "./BurgerButton";
 import { Logo } from "../__components/Logo";
 import { useScrollDirection } from "../__helpers";
+import { Wrapper } from "./Wrapper";
 
 type HeaderMobileProps = {
   variant?: "auto" | "hero" | "default";
@@ -55,7 +55,7 @@ export const HeaderMobile = ({
   return (
     <header
       className={[
-        "tablet:hidden fixed inset-x-0 top-0 z-50 px-4 pt-[env(safe-area-inset-top)]",
+        "tablet:hidden fixed inset-x-0 top-0 z-50 px-7 pt-[env(safe-area-inset-top)]",
         "text-light transition-transform duration-300 will-change-transform",
         scrolledPastHero ? "bg-darker/90 backdrop-blur" : "bg-transparent",
         shouldHide ? "-translate-y-full" : "translate-y-0",
@@ -80,7 +80,7 @@ export const HeaderMobile = ({
           K2.Inked
         </strong>
 
-        <BurgerButton />
+        <Wrapper />
       </div>
     </header>
   );

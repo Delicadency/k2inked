@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import type { NavNode } from "../__helpers/data";
 
 export const useScrollDirection = () => {
@@ -36,4 +36,61 @@ export const hasActive = (node: NavNode, pathname: string): boolean => {
     return node.items.some((c) => hasActive(c, pathname));
   }
   return false;
+};
+
+export const useDisclosure = (initialState = false) => {
+  const [isOpen, setIsOpen] = useState(initialState);
+
+  const open = useCallback(() => {
+    setIsOpen(true);
+  }, []);
+
+  const close = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  const toggle = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
+
+  return {
+    isOpen,
+    open,
+    close,
+    toggle,
+  };
+};
+
+export const useKeyPress = (
+  targetKey: string | string[],
+  callback: (event: KeyboardEvent) => void,
+) => {
+  const [keyPressed, setKeyPressed] = useState(false);
+
+  useEffect(() => {
+    const keys = Array.isArray(targetKey) ? targetKey : [targetKey];
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (keys.includes(event.key)) {
+        setKeyPressed(true);
+        callback(event);
+      }
+    };
+
+    const handleKeyUp = (event: KeyboardEvent) => {
+      if (keys.includes(event.key)) {
+        setKeyPressed(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, [targetKey, callback]);
+
+  return keyPressed;
 };

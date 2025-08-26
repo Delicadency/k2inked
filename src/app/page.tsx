@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="bg-dark h-200"></div>
+      <div className="bg-primary h-200"></div>
       <div
         id="hero-sentinel"
         ref={null}

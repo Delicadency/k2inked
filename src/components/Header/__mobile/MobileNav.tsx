@@ -1,16 +1,22 @@
+"use client";
+
 import { Fragment } from "react";
 import Link from "next/link";
-import { Container } from "@/components/Container";
-import { Logo } from "../__components/Logo";
-import { BurgerButton } from "./BurgerButton";
 import { usePathname } from "next/navigation";
+import { Logo } from "../__components/Logo";
 import { NavNode, NAV_MOBILE } from "../__helpers/data";
 import { GroupNode } from "../__components/GroupNode";
+import { BurgerButton } from "./BurgerButton";
+import { MobileMenuPortal } from "./MobileMenuPortal";
+import { Divider } from "@/icons/Divider";
+import { SocialmediaTray } from "@/components/Socialmedia/SocialmediaTray";
 
-export const MobileNav = () => {
+type MobileNavProps = { onClose: () => void };
+
+export const MobileNav = ({ onClose }: MobileNavProps) => {
   const pathname = usePathname();
 
-  const renderNode = (node: NavNode, depth = 0) => {
+  const renderNode = (node: NavNode, depth = 0): React.ReactNode => {
     switch (node.kind) {
       case "link": {
         const active = node.isActive
@@ -20,16 +26,17 @@ export const MobileNav = () => {
           <Link
             href={node.href}
             aria-current={active ? "page" : undefined}
+            onClick={onClose}
             className={[
-              "block py-3 tracking-[0.12em]",
-              active ? "bg-primary text-light rounded px-3" : "text-light/90",
+              "text-light block max-w-[80vw] py-2 tracking-[0.15em]",
+              active ? "bg-primary rounded-tr-md rounded-bl-md px-7" : "",
             ].join(" ")}
           >
             {node.label}
           </Link>
         );
       }
-      case "group": {
+      case "group":
         return (
           <GroupNode
             node={node}
@@ -38,30 +45,37 @@ export const MobileNav = () => {
             renderNode={renderNode}
           />
         );
-      }
     }
   };
 
   return (
-    <Container>
+    <MobileMenuPortal>
       <div
-        className="bg-dark relative size-full w-screen"
+        role="dialog"
+        aria-modal="true"
         aria-label="Menu"
-        aria-roledescription="Menu"
+        className="bg-dark/95 supports-[backdrop-filter]:bg-darker/90 fixed inset-0 z-[80] overflow-scroll backdrop-blur"
       >
-        <div>
+        <div className="text-light mb-6 flex h-14 items-center justify-between px-7">
           <Logo className="w-10" />
-          <strong className="font-marcellus-sc text-xl tracking-[0.15em] transition-opacity duration-300">
+          <strong className="font-marcellus-sc text-xl tracking-[0.15em]">
             K2.Inked
           </strong>
-          <BurgerButton />
+
+          <BurgerButton onClose={onClose} />
         </div>
-        <nav aria-label="Nawigacja mobilna">
+
+        <nav
+          aria-label="Nawigacja mobilna"
+          className="text-light min-h-dvh overflow-y-auto px-13.5 pt-2 pb-10"
+        >
           {NAV_MOBILE.map((n, i) => (
             <Fragment key={i}>{renderNode(n)}</Fragment>
           ))}
+          <Divider className="mt-20 mb-8" capWidth={70} lineThickness={2} />
+          <SocialmediaTray navclassName="flex justify-center items-center flex-row gap-7.5" />
         </nav>
       </div>
-    </Container>
+    </MobileMenuPortal>
   );
 };

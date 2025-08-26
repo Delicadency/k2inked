@@ -48,19 +48,19 @@ export const NAV_MOBILE = [
     items: [
       {
         kind: "group",
-        label: "Tatuaż",
+        label: "TATUAŻ",
         collapsible: true,
         items: tattooArtists,
       },
       {
         kind: "group",
-        label: "Piercing",
+        label: "PIERCING",
         collapsible: true,
         items: piercingArtists,
       },
     ],
   },
-  { kind: "link", label: "Galeria", href: STATIC_ROUTES.GALLERY },
-  { kind: "link", label: "Regulamin", href: STATIC_ROUTES.REGULATIONS },
-  { kind: "link", label: "Kontakt", href: STATIC_ROUTES.CONTACT },
+  { kind: "link", label: "GALERIA", href: STATIC_ROUTES.GALLERY },
+  { kind: "link", label: "REGULAMIN", href: STATIC_ROUTES.REGULATIONS },
+  { kind: "link", label: "KONTAKT", href: STATIC_ROUTES.CONTACT },
 ] as const satisfies readonly NavNode[];

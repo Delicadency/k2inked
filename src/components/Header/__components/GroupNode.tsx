@@ -23,12 +23,12 @@ export const GroupNode = ({ node, depth, pathname, renderNode }: Props) => {
   return (
     <div>
       <button
-        className="flex w-full items-center justify-between py-4 text-left"
+        className="flex w-full items-center gap-3 py-4 text-left text-light"
         aria-expanded={open}
         onClick={() => setManualOpen((v) => (v === null ? !open : !v))}
       >
         <span className="tracking-[0.14em]">{node.label}</span>
-        <IconChevron className={`transition ${open ? "rotate-180" : ""}`} />
+        <IconChevron className={`size-6 transition ${open ? "rotate-270" : "rotate-90"}`} />
       </button>
 
       {open && (
