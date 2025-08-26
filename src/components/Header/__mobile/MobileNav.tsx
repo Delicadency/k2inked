@@ -7,7 +7,6 @@ import { Logo } from "../__components/Logo";
 import { NavNode, NAV_MOBILE } from "../__helpers/data";
 import { GroupNode } from "../__components/GroupNode";
 import { BurgerButton } from "./BurgerButton";
-import { MobileMenuPortal } from "./MobileMenuPortal";
 import { Divider } from "@/icons/Divider";
 import { SocialmediaTray } from "@/components/Socialmedia/SocialmediaTray";
 
@@ -49,33 +48,25 @@ export const MobileNav = ({ onClose }: MobileNavProps) => {
   };
 
   return (
-    <MobileMenuPortal>
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-label="Menu"
-        className="bg-dark/95 supports-[backdrop-filter]:bg-darker/90 fixed inset-0 z-[80] overflow-scroll backdrop-blur"
-      >
-        <div className="text-light mb-6 flex h-14 items-center justify-between px-7">
-          <Logo className="w-10" />
-          <strong className="font-marcellus-sc text-xl tracking-[0.15em]">
-            K2.Inked
-          </strong>
-
-          <BurgerButton onClose={onClose} />
-        </div>
-
-        <nav
-          aria-label="Nawigacja mobilna"
-          className="text-light min-h-dvh overflow-y-auto px-13.5 pt-2 pb-10"
-        >
-          {NAV_MOBILE.map((n, i) => (
-            <Fragment key={i}>{renderNode(n)}</Fragment>
-          ))}
-          <Divider className="mt-20 mb-8" capWidth={70} lineThickness={2} />
-          <SocialmediaTray navclassName="flex justify-center items-center flex-row gap-7.5" />
-        </nav>
+    <div className="flex h-dvh flex-col">
+      <div className="text-light mb-6 flex h-14 items-center justify-between px-7">
+        <Logo className="w-10" />
+        <strong className="font-marcellus-sc text-xl tracking-[0.15em]">
+          K2.Inked
+        </strong>
+        <BurgerButton onClose={onClose} />
       </div>
-    </MobileMenuPortal>
+
+      <nav
+        aria-label="Nawigacja mobilna"
+        className="text-light min-h-0 flex-1 overflow-y-auto px-13.5 pt-2 pb-10"
+      >
+        {NAV_MOBILE.map((n, i) => (
+          <Fragment key={i}>{renderNode(n)}</Fragment>
+        ))}
+        <Divider className="mt-20 mb-8" capWidth={70} lineThickness={2} />
+        <SocialmediaTray navclassName="flex justify-center items-center flex-row gap-7.5" />
+      </nav>
+    </div>
   );
 };
