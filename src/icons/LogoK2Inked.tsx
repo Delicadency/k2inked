@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const LogoK2Inked = ({ classname, width, height }: IconProps) => (
+export const LogoK2Inked = ({ className, width, height }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={width}
     height={height}
     viewBox="0 0 315 446"

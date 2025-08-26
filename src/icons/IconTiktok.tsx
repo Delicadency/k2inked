@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const IconTiktok = ({ classname, size }: IconProps) => (
+export const IconTiktok = ({ className, size }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={size}
     height={size}
     viewBox="0 0 50 50"

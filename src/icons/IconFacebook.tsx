@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const IconFacebook = ({ classname, size }: IconProps) => (
+export const IconFacebook = ({ className, size }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={size}
     height={size}
     viewBox="0 0 49 49"

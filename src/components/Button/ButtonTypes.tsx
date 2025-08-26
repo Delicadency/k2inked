@@ -3,7 +3,7 @@ import type {
   MouseEventHandler,
   ReactNode,
 } from "react";
-import type { InternalHref} from "@/routes";
+import type { InternalHref } from "@/routes";
 
 export type Variant = "light" | "lightTrans" | "primary" | "primaryTrans";
 
@@ -31,12 +31,11 @@ export type InternalAnchor = {
   target?: "_self";
   rel?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
-  disabled?: boolean; 
+  disabled?: boolean;
 } & Omit<
   ComponentPropsWithoutRef<"a">,
   "className" | "children" | "href" | "onClick" | "target" | "rel"
 >;
-
 
 export type ExternalAnchor = {
   as: "a";
@@ -44,10 +43,11 @@ export type ExternalAnchor = {
   target?: "_blank" | "_self";
   rel?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
-  disabled?: boolean; 
+  disabled?: boolean;
 } & Omit<
   ComponentPropsWithoutRef<"a">,
   "className" | "children" | "href" | "onClick" | "target" | "rel"
 >;
 
-export type ButtonProps = CommonProps & (ButtonFlavor | InternalAnchor | ExternalAnchor);
+export type ButtonProps = CommonProps &
+  (ButtonFlavor | InternalAnchor | ExternalAnchor);

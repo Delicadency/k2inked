@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const IconBurger = ({ classname, width, height }: IconProps) => (
+export const IconBurger = ({ className, width, height }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={width}
     height={height}
     viewBox="0 0 24 17"

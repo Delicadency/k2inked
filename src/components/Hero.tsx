@@ -13,7 +13,7 @@ export const Hero = () => (
     priority
   >
     <section className="flex min-h-[100svh] w-full flex-col items-center justify-center px-[10vw]">
-      <LogoK2Inked classname="text-light h-[50vh] desktop:h-[600px] tablet:max-w-[500px]" />
+      <LogoK2Inked className="text-light desktop:h-[600px] tablet:max-w-[500px] h-[50vh]" />
       <Heading tag="h1" variant="light">
         K2.inked
       </Heading>

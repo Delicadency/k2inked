@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import Image, { ImageProps } from "next/image";
 
 type BackgroundImageProps = ImageProps & {
-  classname?: string;
+  className?: string;
   children?: React.ReactNode;
 };
 
@@ -13,7 +13,7 @@ export const BackgroundImage = ({
   children,
   ...props
 }: BackgroundImageProps) => (
-  <div className="relative h-screen  overflow-hidden">
+  <div className="relative h-screen overflow-hidden">
     <Image
       src={src}
       alt={alt}

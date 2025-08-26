@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
+import type { NavNode } from "../__helpers/data";
 
 export const useScrollDirection = () => {
   const [direction, setDirection] = useState<"up" | "down">("down");
@@ -25,4 +26,14 @@ export const useScrollDirection = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return direction;
+};
+
+export const hasActive = (node: NavNode, pathname: string): boolean => {
+  if (node.kind === "link") {
+    return node.isActive ? node.isActive(pathname) : pathname === node.href;
+  }
+  if (node.kind === "group") {
+    return node.items.some((c) => hasActive(c, pathname));
+  }
+  return false;
 };

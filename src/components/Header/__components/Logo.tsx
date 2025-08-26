@@ -4,7 +4,7 @@ import Link from "next/link";
 
 type LogoProps = {
   className: string;
-  logoClassName: string;
+  logoClassName?: string;
 };
 
 export const Logo = ({ className, logoClassName }: LogoProps) => (
@@ -13,6 +13,6 @@ export const Logo = ({ className, logoClassName }: LogoProps) => (
     aria-label="Przejdź do strony głównej salonu K2.Inked"
     className={logoClassName}
   >
-    <LogoK2Inked classname={className} />
+    <LogoK2Inked className={className} />
   </Link>
 );

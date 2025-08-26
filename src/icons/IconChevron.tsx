@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const IconChevron = ({ classname, width, height }: IconProps) => (
+export const IconChevron = ({ className, width, height }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={width}
     height={height}
     viewBox="0 0 34 68"

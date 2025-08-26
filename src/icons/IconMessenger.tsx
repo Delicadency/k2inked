@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const IconMessenger = ({ classname, size }: IconProps) => (
+export const IconMessenger = ({ className, size }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={size}
     height={size}
     viewBox="0 0 50 50"

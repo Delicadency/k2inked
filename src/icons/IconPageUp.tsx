@@ -1,8 +1,8 @@
 import { IconProps } from "@/types";
 
-export const IconPageUp = ({ classname, size }: IconProps) => (
+export const IconPageUp = ({ className, size }: IconProps) => (
   <svg
-    className={classname}
+    className={className}
     width={size}
     height={size}
     viewBox="0 0 53 53"
