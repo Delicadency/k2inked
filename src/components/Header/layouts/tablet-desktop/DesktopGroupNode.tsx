@@ -68,7 +68,7 @@ export const DesktopGroupNode = ({ node, pathname, renderLink }: Props) => {
       {open && (
         <div
           role="menu"
-          className="bg-dark/95 absolute top-full -left-30 mt-2 w-80 rounded-b-md p-4 shadow-lg ring-1 ring-white/10"
+          className="bg-dark/95 absolute top-full tablet:-left-20 desktop:-left-25 mt-2 desktop:w-70 tablet:w-60 rounded-b-md p-4 shadow-lg ring-1 ring-white/10"
         >
           {sections.map((section, i) => (
             <div
