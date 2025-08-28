@@ -13,7 +13,7 @@ export const base =
 export const variants: Record<Variant, string> = {
   light: "text-dark bg-light hover:bg-light/90",
   lightTrans:
-    "!text-light bg-transparent ring-1 ring-inset ring-light/60 hover:bg-light/10",
+    "text-light bg-transparent ring-1 ring-inset ring-light/60 hover:bg-light/10",
   primary: "text-light bg-primary hover:bg-primary/90",
   primaryTrans:
     "text-primary bg-transparent ring-1 ring-inset ring-primary/60 hover:bg-primary/10",

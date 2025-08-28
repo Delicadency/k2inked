@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 import { useDisclosure, useKeyPress } from "../__helpers";
 import { useRef, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 import { IconBurger } from "@/icons/IconBurger";
+import { cn } from "@/utils";
 
 const Navigation = dynamic(() =>
   import("./MobileNav").then((mod) => mod.MobileNav),
@@ -39,7 +39,7 @@ export const Wrapper = () => {
       </button>
 
       <div
-        className={clsx(
+        className={cn(
           "fixed inset-0 z-[70] bg-black/40 transition-opacity duration-200",
           isOpen
             ? "pointer-events-auto opacity-100"
@@ -55,7 +55,7 @@ export const Wrapper = () => {
         role="dialog"
         aria-modal="true"
         aria-label="Menu"
-        className={clsx(
+        className={cn(
           "fixed top-0 right-0 z-[80] h-dvh w-[100vw]",
           "bg-dark/95 supports-[backdrop-filter]:bg-darker/90 backdrop-blur",
           "transition-transform duration-300 ease-out will-change-transform",
