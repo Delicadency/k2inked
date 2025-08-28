@@ -3,9 +3,9 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Logo } from "../__components/Logo";
+import { Logo } from "../../components/Logo";
 import { NavNode, NAV_MOBILE } from "../__helpers/data";
-import { GroupNode } from "../__components/GroupNode";
+import { GroupNode } from "../../components/GroupNode";
 import { BurgerButton } from "./BurgerButton";
 import { Divider } from "@/icons/Divider";
 import { SocialmediaTray } from "@/components/Socialmedia/SocialmediaTray";

@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Logo } from "../__components/Logo";
-import { useScrollDirection } from "../__helpers";
+import { Logo } from "../../components/Logo";
+import { useScrollDirection } from "../../helpers";
 import { Wrapper } from "./Wrapper";
 
 type HeaderMobileProps = {
@@ -23,14 +23,7 @@ export const HeaderMobile = ({
   const [scrolledPastHero, setScrolledPastHero] = useState(
     effectiveVariant === "default",
   );
-
-  const [mounted, setMounted] = useState(false);
-
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const direction = useScrollDirection();
 
   useEffect(() => {
     if (effectiveVariant !== "hero") {
@@ -50,27 +43,19 @@ export const HeaderMobile = ({
     return () => io.disconnect();
   }, [effectiveVariant]);
 
-  useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY || 0);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const nearTop = typeof window !== "undefined" ? window.scrollY < 16 : true;
 
-  const direction = useScrollDirection();
-  const nearTop = scrollY < 16;
   const shouldHide =
-    mounted &&
     !isMenuOpen &&
     scrolledPastHero &&
     !nearTop &&
     direction === "down" &&
-    scrollY > 64;
+    (typeof window === "undefined" ? false : window.scrollY > 64);
 
   return (
     <header
       className={[
-        "tablet:hidden fixed inset-x-0 top-0 z-50 px-7 pt-[env(safe-area-inset-top)]",
+        "tablet:hidden fixed inset-x-0 top-0 z-50 px-4 pt-[env(safe-area-inset-top)]",
         "text-light transition-transform duration-300 will-change-transform",
         scrolledPastHero ? "bg-darker/90 backdrop-blur" : "bg-transparent",
         shouldHide ? "-translate-y-full" : "translate-y-0",

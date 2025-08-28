@@ -1,8 +1,8 @@
 "use client";
-import { HeaderMobile } from "./__mobile/HeaderMobile";
+import { HeaderMobile } from "./layouts/mobile/HeaderMobile";
 
 export const Header = () => (
   <div>
-    <HeaderMobile  />
+    <HeaderMobile />
   </div>
 );
