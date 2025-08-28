@@ -64,3 +64,6 @@ export const NAV_MOBILE = [
   { kind: "link", label: "REGULAMIN", href: STATIC_ROUTES.REGULATIONS },
   { kind: "link", label: "KONTAKT", href: STATIC_ROUTES.CONTACT },
 ] as const satisfies readonly NavNode[];
+
+
+export const NAV_DESKTOP: readonly NavNode[] = NAV_MOBILE.slice(1);

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import type { NavNode } from "../__helpers/data";
+import type { NavNode } from "../helpers/data";
 
 export const useScrollDirection = () => {
   const [direction, setDirection] = useState<"up" | "down">("down");

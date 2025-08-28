@@ -46,7 +46,7 @@
     @apply transition duration-300;
   }
   .link-hover:hover {
-    @apply !text-primary;
+    @apply text-primary;
   } /* add ! to reliably beat other hover colors */
 }
 
