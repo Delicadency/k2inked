@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { useDisclosure, useKeyPress } from "../__helpers";
+import { useDisclosure, useKeyPress } from "../../helpers";
 import { useRef, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { IconBurger } from "@/icons/IconBurger";

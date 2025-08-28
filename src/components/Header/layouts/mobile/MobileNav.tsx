@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "../../components/Logo";
-import { NavNode, NAV_MOBILE } from "../__helpers/data";
+import { NavNode, NAV_MOBILE } from "../../helpers/data";
 import { GroupNode } from "../../components/GroupNode";
 import { BurgerButton } from "./BurgerButton";
 import { Divider } from "@/icons/Divider";
