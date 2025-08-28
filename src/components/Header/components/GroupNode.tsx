@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState, Fragment } from "react";
-import type { NavGroup, NavNode } from "../__helpers/data";
-import { hasActive } from "../__helpers";
+import type { NavGroup, NavNode } from "@/components/Header/helpers/data";
+import { hasActive } from "@/components/Header/helpers";
 import { IconChevron } from "@/icons/IconChevron";
 
 type Props = {
