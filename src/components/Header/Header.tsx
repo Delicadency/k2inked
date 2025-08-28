@@ -3,8 +3,8 @@ import { HeaderMobile } from "./layouts/mobile/HeaderMobile";
 import { HeaderTabAndDesk } from "./layouts/tablet-desktop/HeaderTabAndDesk";
 
 export const Header = () => (
-  <div>
+  <header>
     <HeaderMobile />
     <HeaderTabAndDesk />
-  </div>
+  </header>
 );

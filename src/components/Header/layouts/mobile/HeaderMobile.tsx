@@ -53,9 +53,9 @@ export const HeaderMobile = ({
     (typeof window === "undefined" ? false : window.scrollY > 64);
 
   return (
-    <header
+    <div
       className={[
-        "tablet:hidden fixed inset-x-0 top-0 z-50 px-4 pt-[env(safe-area-inset-top)]",
+        "fixed inset-x-0 top-0 z-50 px-4 pt-[env(safe-area-inset-top)] md:hidden",
         "text-light transition-transform duration-300 will-change-transform",
         scrolledPastHero ? "bg-darker/90 backdrop-blur" : "bg-transparent",
         shouldHide ? "-translate-y-full" : "translate-y-0",
@@ -82,6 +82,6 @@ export const HeaderMobile = ({
 
         <Wrapper />
       </div>
-    </header>
+    </div>
   );
 };
