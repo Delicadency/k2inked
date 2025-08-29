@@ -7,16 +7,14 @@ import { Divider } from "@/icons/Divider";
 type PageProps = {
   variant: "light" | "dark";
   headingName: string;
-  tabDivWidth: number;
-  deskDivWidth: number;
+  tabDeskClassName: string;
   children: ReactNode;
 };
 
 export const PageLayout = ({
   variant,
   headingName,
-  tabDivWidth,
-  deskDivWidth,
+  tabDeskClassName,
   children,
 }: PageProps) => {
   const pageVariants = {
@@ -37,9 +35,7 @@ export const PageLayout = ({
           </Heading>
         )}
         <Divider className="tablet:hidden mb-14" capWidth={70} />
-        <div
-          className={`tablet:w-[${tabDivWidth}px] desktop:w-[${deskDivWidth}px]`}
-        >
+        <div className={tabDeskClassName}>
           <Divider className="tablet:flex mb-20 hidden" />
         </div>
         {children}
