@@ -1,3 +1,8 @@
+export type StaticRoute = (typeof STATIC_ROUTES)[keyof typeof STATIC_ROUTES];
+export type ArtistSlug = (typeof ARTIST_SLUGS)[number];
+export type ArtistPath = `/${ArtistSlug}`;
+export type InternalHref = StaticRoute | ArtistPath;
+
 export const STATIC_ROUTES = {
   HOME: "/",
   GALLERY: "/galeria",
@@ -5,8 +10,6 @@ export const STATIC_ROUTES = {
   POLICY: "/polityka-prywatnosci",
   CONTACT: "/kontakt",
 } as const;
-
-export type StaticRoute = (typeof STATIC_ROUTES)[keyof typeof STATIC_ROUTES];
 
 export const ARTIST_SLUGS = [
   "klaudia",
@@ -16,10 +19,6 @@ export const ARTIST_SLUGS = [
   "mirella",
   "emi",
 ] as const;
-
-export type ArtistSlug = (typeof ARTIST_SLUGS)[number];
-export type ArtistPath = `/${ArtistSlug}`;
-export type InternalHref = StaticRoute | ArtistPath;
 
 export const path = {
   ...STATIC_ROUTES,
