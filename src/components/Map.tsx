@@ -4,7 +4,7 @@ type VariantProps = {
 
 export const Map = ({ variant }: VariantProps) => {
   const variants = {
-    hero: "",
+    hero: "relative h-96 max-h-[30%] w-full overflow-hidden tablet:h-[60vh] top-0 tablet:max-h-[400px]  ",
     contact:
       "tablet:h-[55em] tablet:max-h-full tablet:w-[40%] relative h-96 max-h-[30%] w-full overflow-hidden rounded-tr-3xl",
   };

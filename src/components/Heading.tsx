@@ -24,13 +24,13 @@ export const Heading: React.FC<HeadingProps> = ({
   const sizes = {
     h1: "tablet:text-7xl text-[12vw]",
     h2: "tablet:text-[52px] text-[8vw]",
-    h3: "tablet:text-[32px] text-[6vw]",
+    h3: "tablet:text-[24px] text-[6vw]",
   };
 
   return (
     <Heading
       className={cn(
-        "font-marcellus-sc tracking-[0.15em]",
+        "font-marcellus-sc text tracking-[0.15em]",
         variants[variant],
         sizes[tag],
         className,
