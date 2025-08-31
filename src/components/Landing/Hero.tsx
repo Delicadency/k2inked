@@ -2,8 +2,8 @@
 
 import { LogoK2Inked } from "@/icons/LogoK2Inked";
 import { BackgroundImage } from "./BackgroundImage";
-import { Heading } from "./Heading";
-import { Button } from "./Button/Button";
+import { Heading } from "../Heading";
+import { Button } from "../Button/Button";
 import { STATIC_ROUTES } from "@/routes";
 
 export const Hero = () => (
