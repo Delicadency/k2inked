@@ -12,7 +12,7 @@ export const Hero = () => (
     alt="Zdjęcie przedstawiające tatuaż w trakcie wykonywania"
     priority
   >
-    <section className="flex min-h-[100svh] w-full flex-col items-center justify-center px-[10vw]">
+    <section className="flex min-h-[100svh] tablet:pt-40 tablet:pb-25 w-full flex-col items-center justify-center px-[10vw]">
       <LogoK2Inked className="text-light desktop:h-[600px] tablet:max-w-[500px] h-[50vh]" />
       <Heading tag="h1" variant="light">
         K2.inked

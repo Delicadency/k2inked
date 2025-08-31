@@ -13,7 +13,7 @@ export const BackgroundImage = ({
   children,
   ...props
 }: BackgroundImageProps) => (
-  <div className="relative h-screen overflow-hidden">
+  <div className="relative h-fit desktop:h-screen overflow-hidden">
     <Image
       src={src}
       alt={alt}
