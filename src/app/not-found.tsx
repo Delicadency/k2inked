@@ -10,7 +10,7 @@ const NotFound = () => {
       headingName="404"
       tabDeskClassName="tablet:w-110 desktop:w-110"
     >
-      <div className="shadow-dark bg-secondary tablet:mb-80 mb-24.5 flex h-fit w-[90vw] desktop:w-[1000px] flex-col tablet:leading-10 tablet:text-2xl items-center rounded-tr-3xl rounded-bl-3xl p-6.5 py-11 tablet:py-22.5 text-center leading-8 tracking-widest">
+      <div className="drop-shadow-lg/40 bg-secondary tablet:mb-80 mb-24.5 flex h-fit w-[90vw] desktop:w-[1000px] flex-col tablet:leading-10 tablet:text-2xl items-center rounded-tr-3xl rounded-bl-3xl p-6.5 py-11 tablet:py-22.5 text-center leading-8 tracking-widest">
         <p className="mb-6">
           Zawróć. <br />
           Tu nic nie ma. <br />I nie chodzi o minimalizm – po prostu

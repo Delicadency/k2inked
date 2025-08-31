@@ -21,10 +21,10 @@ export const HeaderTabAndDesk = ({
     <div
       className={[
         "text-light inset-x-0 top-0 z-50 hidden md:flex",
-        isHero ? "absolute bg-transparent" : "bg-darker shadow-2xl",
+        isHero ? "absolute bg-transparent" : "bg-darker drop-shadow-lg/20",
       ].join(" ")}
     >
-      <Container className="flex h-35 items-center justify-between tablet:px-6 desktop:px-0">
+      <Container className="tablet:px-6 desktop:px-0 flex h-35 items-center justify-between">
         <Logo className="w-27.5" logoClassName="link-hover" />
         <Nav />
         <SocialmediaTray
