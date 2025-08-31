@@ -23,7 +23,7 @@ export const PageLayout = ({
   };
 
   return (
-    <section className={cn(pageVariants[variant], "h-fit")}>
+    <section className={cn(pageVariants[variant], "h-fit desktop:pb-40 pb-25")}>
       <Container className="flex flex-col items-center px-6.5 pt-34">
         {variant === "light" ? (
           <Heading tag="h2" variant="dark" className="text-center">

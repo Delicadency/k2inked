@@ -42,7 +42,7 @@ export const Form = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="tablet:w-[60%] mb-18.5 flex w-[90%] flex-col gap-6 p-8"
+      className="tablet:w-[60%] flex w-[90%] flex-col gap-6 px-2 desktop:px-8 py-8"
     >
       <div aria-live="polite" className="sr-only">
         {state.submitting ? "Wysyłanie…" : null}

@@ -8,7 +8,7 @@ const Regulations = () => {
       headingName="Regulamin"
       tabDeskClassName="tablet:w-150 desktop:w-150"
     >
-      <article className="tablet:text-lg mb-25 text-base leading-7.5 font-light tracking-[0.12em]">
+      <article className="tablet:text-lg text-base leading-7.5 font-light tracking-[0.12em]">
         {regulations.map((regulation, i) => (
           <p className="mb-6" key={i}>
             {regulation}
