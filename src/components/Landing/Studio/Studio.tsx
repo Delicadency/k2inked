@@ -1,5 +1,6 @@
 import { PageLayout } from "../../PageLayout";
 import { studioData } from "./data";
+import { StudioCarousel } from "./StudioCarousel";
 
 export const Studio = () => {
   return (
@@ -8,11 +9,12 @@ export const Studio = () => {
       variant="dark"
       tabDeskClassName="tablet:w-180 desktop:w-180"
     >
-      <div></div>
+      <StudioCarousel />
+
       {studioData.map((paragraph, index) => (
         <p
           key={index}
-          className="max-w-3xl px-6 pb-6 tablet:text-center leading-7 font-light text-start tracking-[0.12em] not-italic text-sm tablet:text-base"
+          className="tablet:text-center tablet:text-base max-w-3xl px-6 pb-6 text-start text-sm leading-7 font-light tracking-[0.12em] not-italic"
         >
           {paragraph}
         </p>

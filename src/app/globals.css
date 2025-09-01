@@ -50,19 +50,26 @@
   .link-hover:hover {
     @apply text-primary;
   }
-
-  /* swiper config */
-  :root {
-    --swiper-theme-color: #72122a;
-  }
-  .studio-swiper {
-    --swiper-theme-color: #f5f5f5;
-  }
-  .swiper-pagination-bullet {
-    opacity: 0.35;
-  }
   .swiper-pagination-bullet-active {
     opacity: 1;
+  }
+  .swiper-pagination-bullet {
+    opacity: 0.4;
+  }
+
+  .primary-swiper .swiper-pagination-bullet {
+    background-color: #72122a !important;
+  }
+
+  .primary-swiper .swiper-pagination-bullet-active {
+    background-color: #72122a !important;
+  }
+  .light-swiper .swiper-pagination-bullet {
+    background-color: #f5f5f5 !important;
+  }
+
+  .light-swiper .swiper-pagination-bullet-active {
+    background-color: #f5f5f5 !important;
   }
 }
 

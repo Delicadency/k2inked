@@ -22,11 +22,12 @@ export const Carousel = ({ items, className, swiperProps }: CarouselProps) => {
       watchOverflow
       pagination={{ clickable: true, dynamicBullets: true }}
       breakpoints={{
-        768: { slidesPerView: 2, spaceBetween: 20 },  
-        1280: { slidesPerView: 4, spaceBetween: 24 },
+        0: { slidesPerView: 1.2, spaceBetween: 20 },
+        768: { slidesPerView: 2.5, spaceBetween: 20 },
+        1280: { slidesPerView: 4, spaceBetween: 20 },
       }}
       className={className}
-      {...swiperProps} 
+      {...swiperProps}
     >
       {items.map((node, i) => (
         <SwiperSlide key={i}>{node}</SwiperSlide>
