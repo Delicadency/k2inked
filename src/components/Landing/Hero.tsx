@@ -17,7 +17,7 @@ export const Hero = () => (
       <Heading tag="h1" variant="light">
         K2.inked
       </Heading>
-      <Heading tag="h3" variant="light" className="text-center">
+      <Heading tag="h3" variant="light" className="text-center desktop:!text-4xl desktop:py-6">
         Studio w sercu Warszawy
       </Heading>
       <div className="tablet:gap-45 tablet:py-18 flex flex-row gap-[20vw] py-13.5">
