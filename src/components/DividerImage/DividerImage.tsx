@@ -49,7 +49,7 @@ export const DividerImage = ({ id }: DividerProps) => {
   return (
     <section
       ref={rootRef}
-      className="tablet:h-[300px] desktop:h-[400px] relative h-[250px] w-screen overflow-hidden"
+      className="tablet:h-[300px] desktop:h-[400px] relative h-[250px] overflow-hidden"
     >
       <div ref={innerRef} className="absolute -inset-40 will-change-transform">
         <Image
@@ -61,7 +61,7 @@ export const DividerImage = ({ id }: DividerProps) => {
              100vw"
           priority
           quality={90}
-          className="object-cover"
+          className="object-cover brightness-90 contrast-125 grayscale-100"
           style={{
             objectFit: "cover",
             objectPosition: "center",
