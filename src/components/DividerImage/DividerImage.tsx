@@ -49,17 +49,25 @@ export const DividerImage = ({ id }: DividerProps) => {
   return (
     <section
       ref={rootRef}
-      className="desktop:h-[400px] relative h-[250px] tablet:h-[300px] w-screen overflow-hidden"
+      className="tablet:h-[300px] desktop:h-[400px] relative h-[250px] w-screen overflow-hidden"
     >
       <div ref={innerRef} className="absolute -inset-40 will-change-transform">
         <Image
           src={divider.src}
           alt={divider.alt}
-          sizes="100vw"
           fill
-          style={{ objectFit: "cover", objectPosition: "center" }}
-          className="object-cover"
+          sizes="(min-width:1280px) 120vw,
+             (min-width:768px)  115vw,
+             100vw"
           priority
+          quality={90}
+          className="object-cover"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+            transform: "scale(1.2)",
+            transformOrigin: "center",
+          }}
         />
       </div>
     </section>
