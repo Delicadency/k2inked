@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Sentinel />
       <Studio />
-      <DividerImage  id="placeholder1"/>
+      <DividerImage  id="placeholder2"/>
       <Team />
       <DividerImage  id="placeholder2"/>
       <ContactLanding />

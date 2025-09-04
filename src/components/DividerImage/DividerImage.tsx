@@ -61,7 +61,7 @@ export const DividerImage = ({ id }: DividerProps) => {
              100vw"
           priority
           quality={90}
-          className="object-cover brightness-90 contrast-125 grayscale-100"
+          className="object-cover grayscale-100"
           style={{
             objectFit: "cover",
             objectPosition: "center",
