@@ -49,7 +49,7 @@ export const DividerImage = ({ id }: DividerProps) => {
   return (
     <section
       ref={rootRef}
-      className="desktop:h-[400px] relative h-[200px] w-screen overflow-hidden"
+      className="desktop:h-[400px] relative h-[200px] tablet:h-[300px] w-screen overflow-hidden"
     >
       <div ref={innerRef} className="absolute -inset-40 will-change-transform">
         <Image
