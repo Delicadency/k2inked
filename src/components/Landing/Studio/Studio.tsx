@@ -7,7 +7,7 @@ export const Studio = () => {
     <PageLayout
       headingName="Studio"
       variant="dark"
-      tabDeskClassName="tablet:w-180 desktop:w-180"
+      tabDeskClassName="tablet:w-130 desktop:w-130"
     >
       <StudioCarousel />
 
