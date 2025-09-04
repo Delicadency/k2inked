@@ -22,7 +22,7 @@ export const Carousel = ({ items, className, swiperProps }: CarouselProps) => {
       watchOverflow
       pagination={{ clickable: true, dynamicBullets: true }}
       breakpoints={{
-        0: { slidesPerView: 1.2, spaceBetween: 20 },
+        0: { slidesPerView: 1.25, spaceBetween: 10 },
         768: { slidesPerView: 2.5, spaceBetween: 20 },
         1280: { slidesPerView: 4, spaceBetween: 20 },
       }}
