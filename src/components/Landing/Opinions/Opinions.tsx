@@ -1,5 +1,6 @@
 import { PageLayout } from "@/components/PageLayout";
-import { paragraphs } from "./data";
+import { opinionsData, paragraphs } from "./data";
+import { Card } from "./Card";
 
 export const Opinions = () => {
   return (
@@ -15,6 +16,9 @@ export const Opinions = () => {
           </p>
         ))}
       </article>
+      {opinionsData.map((opinion) => (
+        <Card key={opinion.id} {...opinion} />
+      ))}
     </PageLayout>
   );
 };
