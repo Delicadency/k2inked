@@ -1,0 +1,21 @@
+import { PageLayout } from "@/components/PageLayout";
+import { paragraphs } from "./data";
+
+export const Opinions = () => {
+  return (
+    <PageLayout
+      headingName="Poznaj opinie"
+      variant="light"
+      tabDeskClassName="tablet:w-170 desktop:w-170"
+    >
+      <article className="text-dark/80 tablet:text-lg tablet:leading-9 mx-auto max-w-5xl px-6 text-center leading-8 font-light tracking-widest">
+        {" "}
+        {paragraphs.map((p, i) => (
+          <p key={i} className="mb-6 last:mb-0">
+            {p}
+          </p>
+        ))}
+      </article>
+    </PageLayout>
+  );
+};

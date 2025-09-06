@@ -5,6 +5,7 @@ import { Studio } from "@/components/Landing/Studio/Studio";
 import { DividerImage } from "@/components/DividerImage/DividerImage";
 import { Team } from "@/components/Landing/Team/Team";
 import { GalleryLanding } from "@/components/Landing/GalleryLanding/GalleryLanding";
+import { Opinions } from "@/components/Landing/Opinions/Opinions";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <DividerImage  id="placeholder2"/>
       <GalleryLanding />
       <DividerImage  id="placeholder2"/>
+      <Opinions />
       <ContactLanding />
     </>
   );
