@@ -7,7 +7,7 @@ export const GalleryLanding = () => {
   const cards = Array.from({ length: 6 }).map((_, i) => (
     <div
       key={i}
-      className="bg-light/90 h-75 w-75 rounded-2xl backdrop-blur-sm"
+      className="bg-light/90 tablet:h-75 tablet:w-75 h-38 w-38 rounded-2xl backdrop-blur-sm"
     />
   ));
   return (
@@ -17,7 +17,7 @@ export const GalleryLanding = () => {
       tabDeskClassName="tablet:w-170 desktop:w-170"
     >
       {/* placeholder, to change later for LightWidget */}
-      <div className="desktop:grid-cols-3 tablet:grid-cols-2 tablet:pb-20 grid grid-cols-1 gap-8 pb-10">
+      <div className="desktop:grid-cols-3 tablet:pb-20 grid grid-cols-2 gap-2 tablet:gap-8 pb-10">
         {cards}
       </div>
 
