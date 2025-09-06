@@ -14,7 +14,7 @@ export const Studio = () => {
       {studioData.map((paragraph, index) => (
         <p
           key={index}
-          className="tablet:text-center tablet:text-base max-w-3xl px-6 pb-6 text-start text-sm leading-7 font-light tracking-[0.12em] not-italic"
+          className="tablet:text-center tablet:text-base max-w-5xl px-6 pb-6 text-start text-sm leading-7 font-light tracking-[0.12em] not-italic"
         >
           {paragraph}
         </p>
