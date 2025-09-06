@@ -4,6 +4,7 @@ import { Sentinel } from "@/components/Sentinel";
 import { Studio } from "@/components/Landing/Studio/Studio";
 import { DividerImage } from "@/components/DividerImage/DividerImage";
 import { Team } from "@/components/Landing/Team/Team";
+import { GalleryLanding } from "@/components/Landing/GalleryLanding/GalleryLanding";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <Studio />
       <DividerImage  id="placeholder2"/>
       <Team />
+      <DividerImage  id="placeholder2"/>
+      <GalleryLanding />
       <DividerImage  id="placeholder2"/>
       <ContactLanding />
     </>
