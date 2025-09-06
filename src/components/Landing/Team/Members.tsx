@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TeamData } from "./data";
+import { TeamData } from "@/data/teamData";
 
 export const Members = () => {
   return (
