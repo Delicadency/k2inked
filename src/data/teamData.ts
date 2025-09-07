@@ -22,7 +22,7 @@ export const TeamData: TeamMember[] = [
     alt: "Klaudia",
     route: path.artist("klaudia"),
     heading: "Klaudia",
-    style: "fineline",
+    style: "fineline / single needle",
   },
   {
     id: "kari",
