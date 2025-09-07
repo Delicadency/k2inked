@@ -22,28 +22,28 @@ export const Opinions = () => {
   className="primary-swiper tablet:mt-15 mt-5 mb-10 h-110 w-full max-w-7xl px-6 pt-6 pb-12"
   items={opinionsData.map((op) => <Card key={op.id} {...op} />)}
   swiperProps={{
-    // init modules so breakpoints can enable/disable them
-    navigation: { enabled: false },
+ 
+    navigation: {enabled: true},
     pagination: { enabled: true, clickable: true, dynamicBullets: true },
 
     breakpoints: {
       0: {
         slidesPerView: 1.1,
         spaceBetween: 5,
-        pagination: { enabled: true },
-        navigation: { enabled: false },
+        pagination: {enabled: true},
+        navigation: false,
       },
       768: {
         slidesPerView: 2.5,
         spaceBetween: 20,
-        pagination: { enabled: true },
-        navigation: { enabled: false },
+        pagination: {enabled: true},
+        navigation: false,
       },
       1280: {
         slidesPerView: 4,
         spaceBetween: 15,
-        pagination: { enabled: false }, // hide bullets on desktop
-        navigation: { enabled: true },  // show default arrows
+        pagination: false,
+        navigation: {enabled: true},  
       },
     },
 
