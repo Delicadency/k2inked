@@ -5,8 +5,6 @@ import { Pagination, A11y, Keyboard, Navigation } from "swiper/modules";
 import type { ReactNode } from "react";
 import type { SwiperProps } from "swiper/react";
 
-
-
 type CarouselProps = {
   items: ReactNode[];
   className?: string;
