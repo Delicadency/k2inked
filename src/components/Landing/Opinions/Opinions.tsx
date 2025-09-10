@@ -56,7 +56,6 @@ export const Opinions = () => {
               clickable: true,
               dynamicBullets: true,
             },
-            // tell Swiper to use YOUR buttons
             navigation: {
               enabled: true,
               prevEl: ".opinions-prev",

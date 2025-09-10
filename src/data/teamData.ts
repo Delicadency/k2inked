@@ -1,82 +1,76 @@
-import { path } from "@/routes";
+import { path, type ArtistPath, type ArtistSlug } from "@/routes";
 
-type TeamMember = {
-  id: string;
+type BaseTeamMember = {
   name: string;
-  role: "tattoo" | "piercing";
   imgSrc: string;
   hoverImgSrc?: string;
   alt: string;
-  route: string;
   heading: string;
   style: string;
 };
 
-export const TeamData: TeamMember[] = [
-  {
-    id: "klaudia",
+
+export const TEAM = {
+  klaudia: {
     name: "Klaudia",
-    role: "tattoo",
     imgSrc: "/images/team/image00006.jpeg",
     hoverImgSrc: "/images/team/image00005.jpeg",
     alt: "Klaudia",
-    route: path.artist("klaudia"),
     heading: "Klaudia",
     style: "fineline / single needle",
   },
-  {
-    id: "kari",
+  kari: {
     name: "Kari",
-    role: "tattoo",
     imgSrc: "/images/team/image00009.jpeg",
     hoverImgSrc: "/images/team/image00010.jpeg",
     alt: "Kari",
-    route: path.artist("kari"),
     heading: "Kari",
     style: "blackwork / realism",
   },
-  {
-    id: "sonia",
+  sonia: {
     name: "Sonia",
-    role: "tattoo",
     imgSrc: "/images/team/image00003.jpeg",
     hoverImgSrc: "/images/team/image00004.jpeg",
     alt: "Sonia",
-    route: path.artist("sonia"),
     heading: "Sonia",
-    style: "fineline / ornaments",
+    style: "ornaments / fineline",
   },
-  {
-    id: "ewelina",
+  ewelina: {
     name: "Ewelina",
-    role: "tattoo",
     imgSrc: "/images/team/image00011.jpeg",
     hoverImgSrc: "/images/team/image00012.jpeg",
     alt: "Ewelina",
-    route: path.artist("ewelina"),
     heading: "Ewelina",
     style: "dotwork",
   },
-  {
-    id: "mirella",
+  mirella: {
     name: "Mirella",
-    role: "tattoo",
     imgSrc: "/images/team/image00007.jpeg",
     hoverImgSrc: "/images/team/image00008.jpeg",
     alt: "Mirella",
-    route: path.artist("mirella"),
     heading: "Mirella",
     style: "fineline / microrealism",
   },
-  {
-    id: "emi",
+  emi: {
     name: "Emi",
-    role: "piercing",
     imgSrc: "/images/team/image00001.jpeg",
     hoverImgSrc: "/images/team/image00002.jpeg",
     alt: "Emi",
-    route: path.artist("emi"),
     heading: "Emi",
     style: "piercing",
   },
-] as const;
+} satisfies Record<ArtistSlug, BaseTeamMember>;
+
+export type TeamMember = {
+  id: ArtistSlug;
+  route: ArtistPath;
+} & BaseTeamMember;
+
+export const TEAM_BY_SLUG: Record<ArtistSlug, TeamMember> = (Object
+  .entries(TEAM) as [ArtistSlug, BaseTeamMember][])
+  .reduce((acc, [slug, data]) => {
+    acc[slug] = { id: slug, route: path.artist(slug), ...data };
+    return acc;
+  }, {} as Record<ArtistSlug, TeamMember>);
+
+export const TEAM_LIST: TeamMember[] = Object.values(TEAM_BY_SLUG);
