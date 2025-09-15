@@ -94,7 +94,7 @@ export const TEAM = {
       "Jednocześnie to przemiły, ciepły człowiek o indywidualnym podejściu do klienta pięknym fokusie swojej pracy 🤍",
       "Jeśli marzysz o nietuzinkowym, eleganckim a przede wszystkim bezpiecznym i profesjonalnym piercingu to Emi będzie idealnym wyborem 🫶🏽",
     ],
-    gallery: buildGallery("emi", 18),
+    gallery: buildGallery("emi", 17),
     instagramUsername: "black.peony.piercing",
   },
 } satisfies Record<ArtistSlug, BaseTeamMember>;
