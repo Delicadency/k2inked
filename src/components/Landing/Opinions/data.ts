@@ -17,7 +17,7 @@ export const opinionsData = [
     id: "op1",
     opinion: "Byłem w tym studiu tatuażu w Warszawie i serio – sztos! 😎 Mega miła ekipa, zero spiny, a przy tym pełen profesjonalizm. Wszystko czysto, sprzęt pierwsza klasa, a tatuaż wyszedł dokładnie tak lepiej niż tego oczekiwałem. Atmosfera taka, że człowiek od razu czuje się jak u znajomych. Polecam każdemu, kto chce mieć cudowną dziarkę i miło spędzić czas. Pozdrawiam!",
     author: "Michał Pasik",
-    rate: 4,
+    rate: 5,
     date: "2025-08-12",
     avatar: "/images/opinions/michal_pasik.png",
   },
