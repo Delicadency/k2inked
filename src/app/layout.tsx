@@ -6,7 +6,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 
-
 const inconsolata = localFont({
   src: "./Fonts/Inconsolata.woff2",
   variable: "--font-inconsolata",
@@ -29,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className="scroll-smooth">
+    <html lang="pl" data-scroll-behavior="smooth">
       <body
         className={cn(
           inconsolata.variable,

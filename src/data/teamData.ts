@@ -7,6 +7,7 @@ type BaseTeamMember = {
   style: string;
   paragraph: string[];
   gallery?: string[];
+  instagramUsername?: string;
 };
 
 export const buildGallery = (slug: string, count: number) =>
@@ -28,6 +29,7 @@ export const TEAM = {
       "To chyba tyle o mnie, wpadajcie i poznajcie mnie na żywo!",
     ],
     gallery: buildGallery("klaudia", 12),
+    instagramUsername: "klaudiasmietanka",
   },
   kari: {
     name: "Kari",
@@ -36,6 +38,7 @@ export const TEAM = {
     style: "blackwork / realism",
     paragraph: [],
     gallery: buildGallery("kari", 26),
+    instagramUsername: "karrchar",
   },
   sonia: {
     name: "Sonia",
@@ -46,9 +49,10 @@ export const TEAM = {
       "Z wykształcenia graficzka, a od 4 lat tatuatorka. Rozwijam swój warsztat traktując tatuaż nie tylko jako sztukę, ale też sposób na podkreślenie piękna i wyjątkowości każdej osoby.",
       "Moją największą pasją są delikatne i zdobne wzory – kwiaty, ornamenty w stylu secesyjnym i wszelkie detale, które sprawiają, że tatuaż nabiera wyjątkowego charakteru. Moim celem jest to by projekt idealnie pasował do osoby, która go nosi. W pracy stawiam na elegancję i estetykę, ale też na przyjazną atmosferę.",
       "Tworząc, dbam o to, by w studiu panowała atmosfera luzu i zaufania – tak, aby każdy mógł czuć się komfortowo i wyjść z tatuażem, który będzie miał dla niego prawdziwe znaczenie.",
-      "W wolnym czasie maluję obrazy i spaceruję po lesie z moim psem, o którym na pewno nie raz wspomnę podczas tatuowania. Mam też słabość do starych hitów z lat 80. i bardzo suchych żartów.",
+      "W wolnym czasie maluję obrazy i spaceruję po lesie z moim psem, o którym na pewno nie raz wspomnę podczas tatuowania. Mam też słabość do starych hitów z lat 80 i bardzo suchych żartów.",
     ],
     gallery: buildGallery("sonia", 9),
+    instagramUsername: "ink.sonique",
   },
   ewelina: {
     name: "Ewelina",
@@ -63,6 +67,7 @@ export const TEAM = {
       "Jeśli chcesz poznać moją twórczość bliżej – zapraszam do świata kropek, subtelnych linii i projektów, które powstają z serca.",
     ],
     gallery: buildGallery("ewelina", 11),
+    instagramUsername: "limerencja.tattoo",
   },
   mirella: {
     name: "Mirella",
@@ -75,6 +80,8 @@ export const TEAM = {
       "Mam za sobą setki godzin pracy, tysiące igieł i ogromne doświadczenie, które przekłada się nie tylko na jakość tatuażu, ale też komfort moich klientów. Tatuuję delikatnie – tak, że niektórzy… po prostu zasypiają.",
       "Jeśli szukasz lekkiej, subtelnej kreski, realistycznych detali i atmosfery, w której można się po prostu zrelaksować – zapraszam do mnie.",
     ],
+    gallery: buildGallery("mirella", 24),
+    instagramUsername: "mirella.tattoo",
   },
   emi: {
     name: "Emi",
@@ -88,6 +95,7 @@ export const TEAM = {
       "Jeśli marzysz o nietuzinkowym, eleganckim a przede wszystkim bezpiecznym i profesjonalnym piercingu to Emi będzie idealnym wyborem 🫶🏽",
     ],
     gallery: buildGallery("emi", 18),
+    instagramUsername: "black.peony.piercing",
   },
 } satisfies Record<ArtistSlug, BaseTeamMember>;
 
