@@ -32,7 +32,7 @@ const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
       headingName={member.name}
       tabDeskClassName="w-140"
     >
-      <section className="flex flex-col items-center gap-6">
+      <section className="tablet:flex-row tablet:items-start tablet:gap-30 flex flex-col items-center gap-6 mb-20">
         <div className="tablet:h-125 tablet:w-95 tablet:mb-0 relative mb-9 h-90 w-70 overflow-hidden rounded-3xl drop-shadow-lg/30">
           <Image
             alt={member.name}
@@ -44,12 +44,17 @@ const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
             className="h-full w-full object-cover"
           />
         </div>
-        <InstagramMember username={member.instagramUsername || "k2.inked"} className="size-7.5 mb-8 tablet:mb-0 tablet:size-10" />
-        <article className="tablet:text-lg space-y-4 text-sm">
-          {member.paragraph.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </article>
+        <div className="tablet:flex-col-reverse tablet:items-start flex max-w-3xl flex-col items-center gap-8">
+          <InstagramMember
+            username={member.instagramUsername || "k2.inked"}
+            className="tablet:size-10 size-7.5"
+          />
+          <article className="tablet:text-base tablet:max-w-110 space-y-4 text-sm">
+            {member.paragraph.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </article>
+        </div>
       </section>
     </PageLayout>
   );
