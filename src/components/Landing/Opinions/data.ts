@@ -47,7 +47,7 @@ export const opinionsData = [
   },
   {
     id: "op5",
-    opinion: "Sonia to mistrzyni detali! Jej precyzjZrobiłem 3 przekłucia u Emilki nostrila i 2x brew oraz u Kari na 4 tatuażach na dłoni i przedramieniu. Wzorowo się zagoiło, super atmosfera i mega profesjonalne podejście do tematu wszystkich dziewczyn ze studia. Polecam wszystkim jeśli zależy wam na jakościowym wykonaniu i najlepszej opiece profesjonalistek i dbałość o każdy element tatuażu są imponujące. Mój tatuaż jest nie tylko piękny, ale także trwały i starannie wykonany. Sonia sprawiła, że cały proces był przyjemny i bezstresowy. Zdecydowanie polecam K2 Inked każdemu, kto ceni sobie jakość i profesjonalizm.",
+    opinion: "Zrobiłem 3 przekłucia u Emilki nostrila i 2x brew oraz u Kari na 4 tatuażach na dłoni i przedramieniu. Wzorowo się zagoiło, super atmosfera i mega profesjonalne podejście do tematu wszystkich dziewczyn ze studia. Polecam wszystkim jeśli zależy wam na jakościowym wykonaniu i najlepszej opiece profesjonalistek i dbałość o każdy element tatuażu są imponujące. Mój tatuaż jest nie tylko piękny, ale także trwały i starannie wykonany. Sonia sprawiła, że cały proces był przyjemny i bezstresowy. Zdecydowanie polecam K2 Inked każdemu, kto ceni sobie jakość i profesjonalizm.",
     author: "Igor Święty",
     rate: 5,
     date: "2025-07-25",
