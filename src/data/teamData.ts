@@ -6,7 +6,13 @@ type BaseTeamMember = {
   hoverImgSrc?: string;
   style: string;
   paragraph: string[];
+  gallery?: string[];
 };
+
+export const buildGallery = (slug: string, count: number) =>
+  Array.from({ length: count }, (_, i) => 
+    `/images/artists/${slug}/image${String(i + 1).padStart(5, "0")}.jpeg`
+  );
 
 export const TEAM = {
   klaudia: {
@@ -21,6 +27,7 @@ export const TEAM = {
       "Poza tatuowaniem rysuję grafiki. Jestem też ogromną fanką jedzenia :b. Jeśli można mnie czymś przekupić to właśnie tym. Lubię czytać nowinki z zakresu biohackingu, diety, dbania o swoje ciało i zdrowie. Poza studiem można spotkać mnie na siłowni, bo skoro lubię jeść to wiecie... :). I tak na koniec z moich zainteresowań to tak jak każdy oczywiście uwielbiam podróżować, jeśli czas na to pozwala. Przecież trzeba eksplorować lokalne kuchnie prawda?",
       "To chyba tyle o mnie, wpadajcie i poznajcie mnie na żywo!",
     ],
+    gallery: buildGallery("klaudia", 12),
   },
   kari: {
     name: "Kari",
@@ -28,6 +35,7 @@ export const TEAM = {
     hoverImgSrc: "/images/team/image00010.jpeg",
     style: "blackwork / realism",
     paragraph: [],
+    gallery: buildGallery("kari", 26),
   },
   sonia: {
     name: "Sonia",
@@ -40,6 +48,7 @@ export const TEAM = {
       "Tworząc, dbam o to, by w studiu panowała atmosfera luzu i zaufania – tak, aby każdy mógł czuć się komfortowo i wyjść z tatuażem, który będzie miał dla niego prawdziwe znaczenie.",
       "W wolnym czasie maluję obrazy i spaceruję po lesie z moim psem, o którym na pewno nie raz wspomnę podczas tatuowania. Mam też słabość do starych hitów z lat 80. i bardzo suchych żartów.",
     ],
+    gallery: buildGallery("sonia", 9),
   },
   ewelina: {
     name: "Ewelina",
@@ -53,6 +62,7 @@ export const TEAM = {
       "Prywatnie kocham modę, sport, operę, antyki, muzykę techno, a także francuskie komedie i skandynawskie kryminały. Jedyną rzeczą, której szczerze nienawidzę, jest… masło. (tak, wiem – dziwny wybór, ale mam z nim wieczną wojnę). ",
       "Jeśli chcesz poznać moją twórczość bliżej – zapraszam do świata kropek, subtelnych linii i projektów, które powstają z serca.",
     ],
+    gallery: buildGallery("ewelina", 11),
   },
   mirella: {
     name: "Mirella",
@@ -77,6 +87,7 @@ export const TEAM = {
       "Jednocześnie to przemiły, ciepły człowiek o indywidualnym podejściu do klienta pięknym fokusie swojej pracy 🤍",
       "Jeśli marzysz o nietuzinkowym, eleganckim a przede wszystkim bezpiecznym i profesjonalnym piercingu to Emi będzie idealnym wyborem 🫶🏽",
     ],
+    gallery: buildGallery("emi", 18),
   },
 } satisfies Record<ArtistSlug, BaseTeamMember>;
 
