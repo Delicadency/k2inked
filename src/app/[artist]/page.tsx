@@ -32,7 +32,7 @@ const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
       headingName={member.name}
       tabDeskClassName="w-140"
     >
-      <section className="tablet:flex-row tablet:items-start tablet:gap-30 flex flex-col items-center gap-6 mb-20">
+      <section className="tablet:flex-row tablet:items-start tablet:gap-30 mb-20 flex flex-col items-center gap-6">
         <div className="tablet:h-125 tablet:w-95 tablet:mb-0 relative mb-9 h-90 w-70 overflow-hidden rounded-3xl drop-shadow-lg/30">
           <Image
             alt={member.name}
@@ -56,6 +56,24 @@ const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
           </article>
         </div>
       </section>
+      <div className="tablet:grid-cols-3 tablet:gap-12.5 grid grid-cols-2 gap-2">
+        {member.gallery?.map((src, i) => (
+          <div
+            key={i}
+            className="tablet:size-75 relative size-32.5 overflow-hidden rounded-3xl drop-shadow-lg/30"
+          >
+            <Image
+              alt={`${member.name} - zdjęcie pracy nr. ${i + 1}`}
+              src={src}
+              sizes="(min-width:1280px) 25rem, (min-width:768px) 22rem, 90vw"
+              quality={90}
+              fill
+              priority={i < 2}
+              className="h-full w-full cursor-pointer object-cover grayscale-75 transition-transform duration-300 hover:scale-110 hover:grayscale-0"
+            />
+          </div>
+        ))}
+      </div>
     </PageLayout>
   );
 };
