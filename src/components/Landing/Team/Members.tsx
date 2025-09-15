@@ -18,7 +18,7 @@ export const Members = () => {
 
             <Image
               src={member.imgSrc}
-              alt={member.alt}
+              alt={member.name}
               fill
               sizes="(min-width:1280px) 25rem, (min-width:768px) 22rem, 90vw"
               priority={i < 2}
@@ -29,7 +29,7 @@ export const Members = () => {
             {member.hoverImgSrc && (
               <Image
                 src={member.hoverImgSrc}
-                alt={member.alt}
+                alt={member.name}
                 fill
                 sizes="(min-width:1280px) 25rem, (min-width:768px) 22rem, 90vw"
                 quality={90}
