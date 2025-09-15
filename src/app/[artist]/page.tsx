@@ -1,28 +1,48 @@
 import { notFound } from "next/navigation";
-import {
-  ArtistSlug,
-  ARTIST_SLUGS,
-  RESERVED_SLUGS,
-  isArtistSlug,
-} from "@/routes";
+import { isArtistSlug, RESERVED_SLUGS, ARTIST_SLUGS } from "@/routes";
 import { PageLayout } from "@/components/PageLayout";
+import { TEAM_BY_SLUG } from "@/data/teamData";
 
-type PageProps = {
-  params: { artist: ArtistSlug };
-};
+type ArtistParams = { artist: string };
 
 export const dynamicParams = false;
-export const generateStaticParams = (): PageProps["params"][] => {
-  return ARTIST_SLUGS.filter((slug) => !RESERVED_SLUGS.has(slug)).map(
-    (artist) => ({ artist }),
-  );
-};
+export const generateStaticParams = (): ArtistParams[] =>
+  ARTIST_SLUGS
+    .filter((slug) => !RESERVED_SLUGS.has(slug))
+    .map((artist) => ({ artist }));
 
-const ArtistPage = ({ params }: PageProps) => {
-  if (!isArtistSlug(params.artist) || RESERVED_SLUGS.has(params.artist)) {
+const ArtistPage = async ({
+  params,
+}: {
+  params: Promise<ArtistParams>;
+}) => {
+  const { artist } = await params;
+
+  if (!isArtistSlug(artist) || RESERVED_SLUGS.has(artist)) {
     notFound();
   }
 
-  return <PageLayout variant="light" headingName={params.artist} tabDeskClassName="w-140" ><div></div></PageLayout>
+  const member = TEAM_BY_SLUG[artist];
+
+  if (!member) {
+    notFound();
+  }
+
+  return (
+    <PageLayout
+      variant="light"
+      headingName={member.name}
+      tabDeskClassName="w-140"
+    >
+      <section className="flex flex-col items-center gap-6">
+        <article className="space-y-4">
+          {member.paragraph.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </article>
+      </section>
+    </PageLayout>
+  );
 };
+
 export default ArtistPage;
