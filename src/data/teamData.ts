@@ -11,8 +11,10 @@ type BaseTeamMember = {
 };
 
 export const buildGallery = (slug: string, count: number) =>
-  Array.from({ length: count }, (_, i) => 
-    `/images/artists/${slug}/image${String(i + 1).padStart(5, "0")}.jpeg`
+  Array.from(
+    { length: count },
+    (_, i) =>
+      `/images/artists/${slug}/image${String(i + 1).padStart(5, "0")}.jpeg`,
   );
 
 export const TEAM = {
@@ -36,7 +38,12 @@ export const TEAM = {
     imgSrc: "/images/team/image00009.jpeg",
     hoverImgSrc: "/images/team/image00010.jpeg",
     style: "blackwork / realism",
-    paragraph: [],
+    paragraph: [
+      "Karina, ale każdy mówi mi Kari. Jestem tą jedną z dwóch głów założycielek K2, Klaudia twierdzi, że tą jasną stroną mocy, ale podsumowałabym to tak: ona jest Hayao Miyazaki, a ja Junji Ito 🙂",
+      "Jestem całkowitym samoukiem, rysuję od dziecka, a wiedziałam, że chce zostać tatuatorką odkąd obejrzałam Miami Ink jako dzieciak.",
+      "Jedno słowo opisujące mnie? Dualizm. Kocham wszystko co różowe i czarne, puchate i przerażające, jednorożce i potwory. Świetnie czuje się w mrocznej, czarno białej tematyce jak i w kolorowych portretach Waszych ukochanych zwierzątek.",
+      "Na sesjach stawiam na komfortową atmosferę, jak chcesz pogadać to chętnie wciągnę się w rozmowę z Tobą, a jak wolisz pobyć w ciszy-odpocząć od świata to czuj się równie dobrze.  Domowa atmosfera w profesjonalnych warunkach- wpadaj! 🤍",
+    ],
     gallery: buildGallery("kari", 26),
     instagramUsername: "karrchar",
   },
