@@ -30,7 +30,7 @@ export const TEAM = {
       "Poza tatuowaniem rysuję grafiki. Jestem też ogromną fanką jedzenia :b. Jeśli można mnie czymś przekupić to właśnie tym. Lubię czytać nowinki z zakresu biohackingu, diety, dbania o swoje ciało i zdrowie. Poza studiem można spotkać mnie na siłowni, bo skoro lubię jeść to wiecie... :). I tak na koniec z moich zainteresowań to tak jak każdy oczywiście uwielbiam podróżować, jeśli czas na to pozwala. Przecież trzeba eksplorować lokalne kuchnie prawda?",
       "To chyba tyle o mnie, wpadajcie i poznajcie mnie na żywo!",
     ],
-    gallery: buildGallery("klaudia", 12),
+    gallery: buildGallery("klaudia", 18),
     instagramUsername: "klaudiasmietanka",
   },
   kari: {
@@ -42,9 +42,9 @@ export const TEAM = {
       "Karina, ale każdy mówi mi Kari. Jestem tą jedną z dwóch głów założycielek K2, Klaudia twierdzi, że tą jasną stroną mocy, ale podsumowałabym to tak: ona jest Hayao Miyazaki, a ja Junji Ito 🙂",
       "Jestem całkowitym samoukiem, rysuję od dziecka, a wiedziałam, że chce zostać tatuatorką odkąd obejrzałam Miami Ink jako dzieciak.",
       "Jedno słowo opisujące mnie? Dualizm. Kocham wszystko co różowe i czarne, puchate i przerażające, jednorożce i potwory. Świetnie czuje się w mrocznej, czarno białej tematyce jak i w kolorowych portretach Waszych ukochanych zwierzątek.",
-      "Na sesjach stawiam na komfortową atmosferę, jak chcesz pogadać to chętnie wciągnę się w rozmowę z Tobą, a jak wolisz pobyć w ciszy-odpocząć od świata to czuj się równie dobrze.  Domowa atmosfera w profesjonalnych warunkach- wpadaj! 🤍",
+      "Na sesjach stawiam na komfortową atmosferę, jak chcesz pogadać to chętnie wciągnę się w rozmowę z Tobą, a jak wolisz pobyć w ciszy - odpocząć od świata to czuj się równie dobrze.  Domowa atmosfera w profesjonalnych warunkach - wpadaj! 🤍",
     ],
-    gallery: buildGallery("kari", 26),
+    gallery: buildGallery("kari", 30),
     instagramUsername: "karrchar",
   },
   sonia: {
