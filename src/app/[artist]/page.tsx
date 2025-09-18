@@ -2,8 +2,9 @@ import { notFound } from "next/navigation";
 import { isArtistSlug, RESERVED_SLUGS, ARTIST_SLUGS } from "@/routes";
 import { PageLayout } from "@/components/PageLayout";
 import { TEAM_BY_SLUG } from "@/data/teamData";
-import Image from "next/image";
 import { InstagramMember } from "@/components/Socialmedia/InstagramMember";
+import Image from "next/image";
+import { ArtistGallery } from "./components/ArtistGallery";
 
 type ArtistParams = { artist: string };
 
@@ -56,24 +57,10 @@ const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
           </article>
         </div>
       </section>
-      <div className="tablet:grid-cols-3 tablet:gap-12.5 grid grid-cols-2 gap-2">
-        {member.gallery?.map((src, i) => (
-          <div
-            key={i}
-            className="tablet:size-75 relative size-32.5 overflow-hidden rounded-3xl drop-shadow-lg/30"
-          >
-            <Image
-              alt={`${member.name} - zdjęcie pracy nr. ${i + 1}`}
-              src={src}
-              sizes="(min-width:1280px) 25rem, (min-width:768px) 22rem, 90vw"
-              quality={90}
-              fill
-              priority={i < 2}
-              className="h-full w-full cursor-pointer object-cover grayscale-75 transition-transform duration-300 hover:scale-110 hover:grayscale-0"
-            />
-          </div>
-        ))}
-      </div>
+      <ArtistGallery
+        images={member.gallery || []}
+        name={member.name}
+      />
     </PageLayout>
   );
 };
