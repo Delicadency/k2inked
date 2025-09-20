@@ -2,6 +2,7 @@ import { PageLayout } from "@/components/PageLayout";
 import { contactData } from "./data";
 import { Map } from "../../components/Map";
 import { Form } from "./components/Form";
+import { Metadata } from "next";
 
 const ContactPage = () => {
   return (
@@ -27,3 +28,13 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Kontakt | K2.inked",
+    description:
+      "Skontaktuj się z K2.inked, profesjonalnym studiem tatuażu w Warszawie. Zarezerwuj wizytę lub zadawaj pytania.",
+    alternates: { canonical: "/kontakt" },
+  };
+}
