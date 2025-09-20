@@ -2,7 +2,7 @@ import Link from "next/link";
 import { STATIC_ROUTES } from "@/routes";
 
 export const Attribution = () => (
-  <section className="desktop:flex-row desktop:inline-flex tablet:gap-1 tablet:text-sm flex flex-col items-center gap-3 text-[3vw]">
+  <section className="desktop:inline-flex tablet:gap-2 tablet:text-sm flex flex-col items-center gap-3 text-[3vw]">
     <small>
       &copy; <time dateTime="2025">2025</time>{" "}
       <strong>
@@ -14,7 +14,16 @@ export const Attribution = () => (
           K2.INKED
         </Link>
       </strong>{" "}
-      ALL RIGHTS RESERVED.
+      ALL RIGHTS RESERVED. PHOTOS BY{" "}
+      <a
+        href="https://www.instagram.com/laczynski_ph"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Przejdź do profilu Instagram Tomasza Łączyńskiego"
+        className="link-hover"
+      >
+        <strong>TOMASZ ŁĄCZYŃSKI</strong>.
+      </a>
     </small>
     <small>
       DESIGNED &amp; PROUDLY DEVELOPED BY
