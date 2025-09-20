@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
 import { isArtistSlug, RESERVED_SLUGS, ARTIST_SLUGS } from "@/routes";
 import { PageLayout } from "@/components/PageLayout";
-import { TEAM_BY_SLUG } from "@/data/teamData";
+import { TEAM_BY_SLUG, TEAM } from "@/data/teamData";
 import { InstagramMember } from "@/components/Socialmedia/InstagramMember";
 import Image from "next/image";
 import { ArtistGallery } from "./components/ArtistGallery";
+import { Metadata } from "next";
 
 type ArtistParams = { artist: string };
+type ArtistPageProps = { params: ArtistParams };
 
 export const dynamicParams = false;
 export const generateStaticParams = (): ArtistParams[] =>
@@ -14,8 +16,8 @@ export const generateStaticParams = (): ArtistParams[] =>
     artist,
   }));
 
-const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
-  const { artist } = await params;
+const ArtistPage = async ({ params }: ArtistPageProps) => {
+  const { artist } = params;
 
   if (!isArtistSlug(artist) || RESERVED_SLUGS.has(artist)) {
     notFound();
@@ -57,12 +59,61 @@ const ArtistPage = async ({ params }: { params: Promise<ArtistParams> }) => {
           </article>
         </div>
       </section>
-      <ArtistGallery
-        images={member.gallery || []}
-        name={member.name}
-      />
+      <ArtistGallery images={member.gallery || []} name={member.name} />
     </PageLayout>
   );
 };
 
 export default ArtistPage;
+
+export async function generateMetadata({
+  params,
+}: ArtistPageProps): Promise<Metadata> {
+  const { artist } = params;
+  if (!isArtistSlug(artist)) return notFound();
+
+  const member = TEAM[artist];
+  if (!member) return notFound();
+
+  const seo = member.seo ?? {};
+  const isEmi = member.name.toLowerCase() === "emi";
+
+  const title =
+    seo.title ??
+    (isEmi
+      ? "Emi — piercing | K2.inked"
+      : `${member.name} — portfolio tatuaży | K2.inked`);
+
+  const description =
+    seo.description ??
+    (isEmi
+      ? "Emi — profesjonalne przekłucia w K2.inked w Warszawie. Higiena, precyzja i doradztwo w doborze biżuterii."
+      : `Tatuaże autorstwa ${member.name} w K2.inked Warszawa. Zobacz portfolio i umów wizytę.`);
+
+  const keywords =
+    seo.keywords ??
+    (isEmi
+      ? ["piercing Warszawa", "studio piercingu", "przekłucia", "Emi K2"]
+      : ["tatuaż Warszawa", "studio tatuażu", member.name]);
+
+  const ogImage = seo.ogImage ?? member.imgSrc;
+
+  return {
+    title,
+    description,
+    keywords,
+    alternates: { canonical: `/${artist}` },
+    openGraph: {
+      title,
+      description,
+      url: `https://k2.inked.pl/${artist}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: member.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
+  };
+}

@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -71,7 +70,7 @@ export const metadata: Metadata = {
     title: "K2.inked — Studio tatuażu Warszawa",
     description:
       "Profesjonalne studio tatuażu, higiena i precyzja. Zarezerwuj termin w K2.inked.",
-   // images: ["/og/k2-og.jpg"], <-- to add later if needed
+    // images: ["/og/k2-og.jpg"], <-- to add later if needed
   },
   robots: {
     index: true,
@@ -101,22 +100,27 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"],
   },
   manifest: "/site.webmanifest",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    viewportFit: "cover",
-  },
   formatDetection: { telephone: false, address: false, email: false },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pl" data-scroll-behavior="smooth">
       <body
         className={cn(
           inconsolata.variable,
           marcellusSC.variable,
-          "font-inconsolata text-dark flex min-h-screen flex-col antialiased"
+          "font-inconsolata text-dark flex min-h-screen flex-col antialiased",
         )}
       >
         <Header />
