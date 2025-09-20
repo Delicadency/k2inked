@@ -8,7 +8,7 @@ import { ArtistGallery } from "./components/ArtistGallery";
 import { Metadata } from "next";
 
 type ArtistParams = { artist: string };
-type ArtistPageProps = { params: ArtistParams };
+type ArtistPageProps = { params: Promise<ArtistParams> };
 
 export const dynamicParams = false;
 export const generateStaticParams = (): ArtistParams[] =>
@@ -16,15 +16,11 @@ export const generateStaticParams = (): ArtistParams[] =>
     artist,
   }));
 
-const ArtistPage = async (props: ArtistPageProps) => {
-  const params = await props.params;
-  const { artist } = params;
-
-  if (!isArtistSlug(artist) || RESERVED_SLUGS.has(artist)) {
-    notFound();
-  }
-
+const ArtistPage = async ({ params }: ArtistPageProps) => {
+  const { artist } = await params;
+  if (!isArtistSlug(artist) || RESERVED_SLUGS.has(artist)) notFound();
   const member = TEAM_BY_SLUG[artist];
+  if (!member) notFound();
 
   if (!member) {
     notFound();
@@ -67,12 +63,12 @@ const ArtistPage = async (props: ArtistPageProps) => {
 
 export default ArtistPage;
 
-export async function generateMetadata(props: ArtistPageProps): Promise<Metadata> {
-  const params = await props.params;
-  const { artist } = params;
-  if (!isArtistSlug(artist)) return notFound();
+export async function generateMetadata({
+  params,
+}: ArtistPageProps): Promise<Metadata> {
+  const { artist } = await params;
 
-  const member = TEAM[artist];
+  const member = TEAM[artist as keyof typeof TEAM];
   if (!member) return notFound();
 
   const seo = member.seo ?? {};
