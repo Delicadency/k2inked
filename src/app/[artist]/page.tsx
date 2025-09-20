@@ -16,7 +16,8 @@ export const generateStaticParams = (): ArtistParams[] =>
     artist,
   }));
 
-const ArtistPage = async ({ params }: ArtistPageProps) => {
+const ArtistPage = async (props: ArtistPageProps) => {
+  const params = await props.params;
   const { artist } = params;
 
   if (!isArtistSlug(artist) || RESERVED_SLUGS.has(artist)) {
@@ -66,9 +67,8 @@ const ArtistPage = async ({ params }: ArtistPageProps) => {
 
 export default ArtistPage;
 
-export async function generateMetadata({
-  params,
-}: ArtistPageProps): Promise<Metadata> {
+export async function generateMetadata(props: ArtistPageProps): Promise<Metadata> {
+  const params = await props.params;
   const { artist } = params;
   if (!isArtistSlug(artist)) return notFound();
 
