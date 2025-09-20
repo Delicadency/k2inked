@@ -8,6 +8,12 @@ type BaseTeamMember = {
   paragraph: string[];
   gallery?: string[];
   instagramUsername?: string;
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+    //ogImage?: string; // optional, defaults to /og/{slug}-og.jpg if not provided
+  };
 };
 
 export const buildGallery = (slug: string, count: number) =>
@@ -32,6 +38,13 @@ export const TEAM = {
     ],
     gallery: buildGallery("klaudia", 18),
     instagramUsername: "klaudiasmietanka",
+    seo: {
+      title: "Klaudia — tatuaże realizm i fine line | K2.inked",
+      description:
+        "Klaudia z K2.inked w Warszawie tworzy tatuaże w stylu fineline i single needle. Zobacz jej portfolio i umów wizytę.",
+      keywords: ["tatuaż fineline Warszawa", "fineline tattoo", "Klaudia K2"],
+      //ogImage: "/og/klaudia-og.jpg", // optional
+    },
   },
   kari: {
     name: "Kari",
@@ -46,6 +59,13 @@ export const TEAM = {
     ],
     gallery: buildGallery("kari", 30),
     instagramUsername: "karrchar",
+    seo: {
+      title: "Kari — tatuaże blackwork i realizm | K2.inked",
+      description:
+        "Kari z K2.inked w Warszawie tworzy tatuaże w stylu blackwork i realizmu. Zobacz jej portfolio i umów wizytę.",
+      keywords: ["tatuaż blackwork Warszawa", "blackwork tattoo", "Kari K2"],
+      //ogImage: "/og/kari-og.jpg", // optional
+    },
   },
   sonia: {
     name: "Sonia",
@@ -60,6 +80,13 @@ export const TEAM = {
     ],
     gallery: buildGallery("sonia", 9),
     instagramUsername: "ink.sonique",
+    seo: {
+      title: "Sonia — tatuaże fine line i ornamenty | K2.inked",
+      description:
+        "Sonia z K2.inked w Warszawie tworzy tatuaże w stylu fine line i ornamentów. Zobacz jej portfolio i umów wizytę.",
+      keywords: ["tatuaż fine line Warszawa", "fine line tattoo", "Sonia K2"],
+      //ogImage: "/og/sonia-og.jpg", // optional
+    },
   },
   ewelina: {
     name: "Ewelina",
@@ -75,6 +102,13 @@ export const TEAM = {
     ],
     gallery: buildGallery("ewelina", 11),
     instagramUsername: "limerencja.tattoo",
+    seo: {
+      title: "Ewelina — tatuaże dotwork | K2.inked",
+      description:
+        "Ewelina z K2.inked w Warszawie tworzy tatuaże w stylu dotwork. Zobacz jej portfolio i umów wizytę.",
+      keywords: ["tatuaż dotwork Warszawa", "dotwork tattoo", "Ewelina K2"],
+      //ogImage: "/og/ewelina-og.jpg", // optional
+    },
   },
   mirella: {
     name: "Mirella",
@@ -89,6 +123,13 @@ export const TEAM = {
     ],
     gallery: buildGallery("mirella", 24),
     instagramUsername: "mirella.tattoo",
+    seo: {
+      title: "Mirella — tatuaże fine line i microrealism | K2.inked",
+      description:
+        "Mirella z K2.inked w Warszawie tworzy tatuaże w stylu fine line i microrealism. Zobacz jej portfolio i umów wizytę.",
+      keywords: ["tatuaż fine line Warszawa", "fine line tattoo", "Mirella K2"],
+      //ogImage: "/og/mirella-og.jpg", // optional
+    },
   },
   emi: {
     name: "Emi",
@@ -103,6 +144,13 @@ export const TEAM = {
     ],
     gallery: buildGallery("emi", 17),
     instagramUsername: "black.peony.piercing",
+    seo: {
+      title: "Emi — profesjonalny piercing | K2.inked",
+      description:
+        "Emi z K2.inked w Warszawie specjalizuje się w profesjonalnym piercingu. Zobacz jej portfolio i umów wizytę.",
+      keywords: ["piercing Warszawa", "professional piercing", "Emi K2"],
+      //ogImage: "/og/emi-og.jpg", // optional
+    },
   },
 } satisfies Record<ArtistSlug, BaseTeamMember>;
 
