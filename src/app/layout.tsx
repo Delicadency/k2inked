@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { cn } from "@/utils";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/Header/Header";
@@ -127,6 +128,36 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Analytics />
+        <Script
+          id="ld-localbusiness"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TattooParlor",
+            name: "K2.inked",
+            url: "https://k2.inked.vercel.app", // to change later to real domain
+            telephone: "+48 883 308 451",
+            priceRange: "$$$",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Krucza 47A",
+              addressLocality: "Warszawa",
+              postalCode: "00-509",
+              addressCountry: "PL",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 52.2302385893085,
+              longitude: 21.016352031548752,
+            },
+            sameAs: [
+              "https://www.instagram.com/k2.inked",
+              "https://www.facebook.com/k2.inked",
+            ],
+          })}
+        </Script>
       </body>
     </html>
   );
