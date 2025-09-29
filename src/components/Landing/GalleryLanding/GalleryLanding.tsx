@@ -16,7 +16,7 @@ export const GalleryLanding = () => {
         strategy="afterInteractive"
       />
       <iframe
-        src="//lightwidget.com/widgets/438082b29386560ebccfe4a16ba55625.html"
+        src="https://cdn.lightwidget.com/widgets/438082b29386560ebccfe4a16ba55625.html"
         scrolling="no"
         loading="lazy"
         className="lightwidget-widget w-full overflow-hidden border-0"
@@ -34,3 +34,4 @@ export const GalleryLanding = () => {
     </PageLayout>
   );
 };
+
