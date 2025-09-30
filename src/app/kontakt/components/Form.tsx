@@ -131,10 +131,10 @@ export const Form = () => {
             Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
             udzielenia odpowiedzi na przesłane zapytanie, zgodnie z{" "}
             <Link
-              href={path.POLICY}
+              href={path.REGULATIONS}
               className="hover:text-light/80 underline transition duration-300"
             >
-              Polityką Prywatności
+              Regulaminem i Polityką Prywatności
             </Link>
             .
           </p>
