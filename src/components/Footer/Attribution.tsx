@@ -14,7 +14,10 @@ export const Attribution = () => (
           K2.INKED
         </Link>
       </strong>{" "}
-      ALL RIGHTS RESERVED. PHOTOS BY{" "}
+      ALL RIGHTS RESERVED.{" "}
+    </small>
+    <small>
+      PHOTOS BY{" "}
       <a
         href="https://www.instagram.com/laczynski_ph"
         target="_blank"

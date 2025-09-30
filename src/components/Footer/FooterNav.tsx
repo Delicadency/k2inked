@@ -6,16 +6,9 @@ export const FooterNav = () => (
     <Link
       href={STATIC_ROUTES.REGULATIONS}
       aria-label="Kliknij, by przejść do regulaminu salonu K2.Inked"
-      className="link-hover"
+      className="link-hover flex flex-col"
     >
-      REGULAMIN
-    </Link>
-    <Link
-      href={STATIC_ROUTES.POLICY}
-      aria-label="Kliknij, by przejść do polityki prywatności strony salonu K2.Inked"
-      className="link-hover"
-    >
-      POLITYKA PRYWATNOŚCI
+      <span>REGULAMIN</span> <span>I POLITYKA PRYWATNOŚCI</span>
     </Link>
   </nav>
 );
