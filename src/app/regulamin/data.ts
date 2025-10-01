@@ -1584,27 +1584,31 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Administrator danych: "),
                 t(
-                  "Administratorem danych osobowych Klientów jest Karina Charytoniuk oraz Klaudia Śmietana prowadzące działalność gospodarczą w ramach spółki K2.Inked s.c....",
+                  "Administratorem danych osobowych Klientów jest Karina Charytonik oraz Klaudia Śmietana prowadzące działalność gospodarczą oraz działające w ramach spółki K2.Inked s.c. z siedzibą w Warszawie, ul. Krucza 47a/3, 00-509 Warszawa, NIP: 7011268827 REGON: 542087518. Kontakt w sprawach ochrony danych osobowych jest możliwy pod adresem e-mail: k2.inked@icloud.com",
                 ),
               ],
             },
             {
               content: [
                 b("Zakres zbieranych danych: "),
-                b("Studio "),
                 t(
-                  "zbiera imię, nazwisko, datę urodzenia, kontakt, dane zdrowotne z ankiety, zgody, zdjęcia tatuaży...",
+                  "Studio zbiera i przetwarza dane osobowe podane przez Klienta w związku z korzystaniem z usług Studia. Są to w szczególności: imię, nazwisko, data urodzenia (weryfikacja pełnoletności), dane kontaktowe (nr telefonu, e-mail), a także informacje dot. stanu zdrowia zawarte w ankiecie (np. o alergiach, chorobach) i ewentualnie zgodzie na tatuaż. Studio może również przetwarzać wizerunek Klienta utrwalony na zdjęciach tatuażu (zgodnie z zasadami opisanymi w sekcji dot. dokumentacji fotograficznej).",
                 ),
               ],
             },
             {
-              content: [b("Cele i podstawa prawna przetwarzania: ")],
+              content: [
+                b("Cele i podstawa prawna przetwarzania: "),
+                t(
+                  "Dane Klienta przetwarzane są wyłącznie w celach związanych z działalnością Studia, tj.:",
+                ),
+              ],
               children: [
                 {
                   content: [
                     b("Świadczenie usługi tatuażu – "),
                     t(
-                      "umawianie wizyt, wykonanie tatuażu, dokumentacja, kontakt z Klientem...",
+                      "umawianie wizyt, wykonanie tatuażu, prowadzenie dokumentacji zabiegu, kontakt z Klientem przed i po zabiegu (Art. 6 ust.1 lit. b RODO – przetwarzanie niezbędne do wykonania umowy o usługę, której stroną jest Klient).",
                     ),
                   ],
                 },
@@ -1612,22 +1616,24 @@ export const REGULATIONS: Doc = {
                   content: [
                     b("Wypełnienie obowiązków prawnych – "),
                     t(
-                      "np. faktury, ankiety zdrowia, zgodnie z przepisami prawa...",
+                      "np. przechowywanie dokumentacji księgowej (faktur) zawierających dane Klientów, zapewnienie warunków sanitarnych (ankiety zdrowia) (Art. 6 ust.1 lit. c RODO – obowiązek prawny ciążący na administratorze).",
                     ),
                   ],
                 },
                 {
                   content: [
-                    b("Cele marketingowe i archiwalne – "),
+                    b("Cele marketingowe i archiwalne Studia – "),
                     t(
-                      "np. publikacja zdjęć w portfolio, wysyłka informacji – tylko za zgodą Klienta...",
+                      "za odrębną zgodą Klienta jego dane (np. adres e-mail) mogą być użyte do wysyłania informacji o promocjach, a zdjęcia wykonanych tatuaży mogą być publikowane w portfolio Studia (Art.6 ust.1 lit. a RODO – zgoda osoby, której dane dotyczą). Klient ma prawo odmówić takiej zgody bez wpływu na skorzystanie z usługi tatuażu.",
                     ),
                   ],
                 },
                 {
                   content: [
                     b("Ochrona prawna – "),
-                    t("np. dochodzenie roszczeń, obrona przed roszczeniami..."),
+                    t(
+                      "w razie konieczności dane mogą być przetwarzane w celu dochodzenia roszczeń lub obrony przed roszczeniami (Art. 6 ust.1 lit. f RODO – prawnie uzasadniony interes administratora).",
+                    ),
                   ],
                 },
               ],
@@ -1636,7 +1642,7 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Dobrowolność podania danych: "),
                 t(
-                  "Podanie danych jest dobrowolne, ale niezbędne do realizacji usług; brak danych = odmowa wykonania tatuażu...",
+                  "Podanie danych osobowych jest dobrowolne, ale niezbędne do świadczenia usługi. Klient musi podać prawdziwe dane kontaktowe i okazać dokument potwierdzający wiek – w przeciwnym razie Studio odmówi wykonania tatuażu. Podanie danych medycznych w ankiecie jest także dobrowolne, jednak brak tych informacji lub podanie fałszywych może skutkować odmową usługi ze względów bezpieczeństwa.",
                 ),
               ],
             },
@@ -1644,15 +1650,15 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Udostępnianie danych: "),
                 t(
-                  "Dane są poufne, nie sprzedaje się ich, udostępnia się tylko zgodnie z prawem (np. urzędom, księgowości)...",
+                  "Dane osobowe Klienta są poufne. Studio nie sprzedaje ani nie udostępnia danych Klientów osobom trzecim, za wyjątkiem sytuacji, w których obowiązek taki wynika z przepisów prawa (np. na żądanie uprawnionych organów państwowych) lub jest niezbędny do realizacji usługi/rozliczeń (np. przekazanie niezbędnych danych księgowych biuru rachunkowemu, dostępowi do systemu rezerwacji online, jeśli jest używany – zawsze na podstawie umowy powierzenia i z zapewnieniem poufności).",
                 ),
               ],
             },
             {
               content: [
-                b("Okres przechowywania danych: "),
+                b("Okres przechowywania: "),
                 t(
-                  "Dane przechowywane są tylko tak długo, jak wymagają przepisy; dane marketingowe do cofnięcia zgody; zdjęcia tatuaży bezterminowo w portfolio...",
+                  "Dane Klienta będą przechowywane tylko tak długo, jak jest to konieczne do realizacji celów, dla których zostały zebrane. Dane dot. umów i rachunków – przez okres wymagany przepisami. Dane kontaktowe dla celów marketingowych – do momentu wycofania zgody przez Klienta. Ankiety zdrowotne i zgody – przez okres istnienia tatuażu jako świadczenia usługi (dla celów dowodowych w razie roszczeń – nie dłużej niż 10 lat). Zdjęcia tatuaży – bezterminowo w portfolio, chyba że Klient zażąda ich usunięcia po pewnym czasie.",
                 ),
               ],
             },
@@ -1660,7 +1666,7 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Prawa Klienta: "),
                 t(
-                  "Dostęp, sprostowanie, usunięcie, ograniczenie, sprzeciw, cofnięcie zgody, przenoszenie danych...",
+                  "Zgodnie z RODO, Klientowi przysługują prawa: dostępu do treści swoich danych, sprostowania (poprawienia) danych, usunięcia danych (tzw. prawo do bycia zapomnianym), ograniczenia przetwarzania, przenoszenia danych, a także prawo sprzeciwu wobec przetwarzania w oparciu o uzasadniony interes lub do celów marketingowych. Ponadto, jeśli przetwarzanie odbywa się na podstawie zgody, Klient ma prawo tę zgodę w dowolnym momencie wycofać.",
                 ),
               ],
             },
@@ -1668,7 +1674,7 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Realizacja praw: "),
                 t(
-                  "Kontakt mailowy lub osobisty ze Studiem; odpowiedź max 1 miesiąc...",
+                  "W celu realizacji swoich praw należy skontaktować się z administratorem danych (Studio) osobiście lub poprzez e-mail. Studio spełni żądania w zakresie przewidzianym przez przepisy i poinformuje Klienta o podjętych działaniach najpóźniej w terminie miesiąca.",
                 ),
               ],
             },
@@ -1676,7 +1682,7 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Bezpieczeństwo danych: "),
                 t(
-                  "Zabezpieczenia techniczne i organizacyjne, dostęp tylko dla uprawnionych osób...",
+                  "Studio stosuje odpowiednie środki organizacyjne i techniczne, aby chronić dane Klientów przed nieuprawnionym dostępem, utratą czy uszkodzeniem. Dostęp do danych mają wyłącznie upoważnieni pracownicy/współpracownicy Studia (np. Tatuatorzy wgląd w ankiety zdrowia) i tylko w zakresie niezbędnym do wykonywania obowiązków. Dokumenty papierowe (ankiety, zgody) przechowywane są w zabezpieczonym miejscu, a dane elektroniczne – na zabezpieczonych hasłem urządzeniach.",
                 ),
               ],
             },
@@ -1684,7 +1690,7 @@ export const REGULATIONS: Doc = {
               content: [
                 b("Skargi dot. danych: "),
                 t(
-                  "Prawo wniesienia skargi do PUODO, ale preferowany kontakt bezpośrednio ze Studiem...",
+                  "Klient ma prawo wnieść skargę do organu nadzorczego ds. ochrony danych osobowych (w Polsce: Prezes Urzędu Ochrony Danych Osobowych), jeśli uzna, że jego dane są przetwarzane niezgodnie z obowiązującym prawem. Jednakże zachęcamy w pierwszej kolejności do kontaktu ze Studiem – chętnie wyjaśnimy wszelkie wątpliwości i naprawimy ewentualne uchybienia.",
                 ),
               ],
             },
@@ -1702,43 +1708,54 @@ export const REGULATIONS: Doc = {
           content: [
             {
               content: [
+                t("Niniejszy "),
+                b("Regulamin "),
                 t(
-                  "Regulamin obowiązuje od 5 sierpnia 2025 i dostępny jest na stronie internetowej oraz w siedzibie Studia. Studio może wprowadzać zmiany – publikacja zmian na stronie internetowej, wchodzą w życie z dniem publikacji, chyba że określono inny termin. Rezerwacje dokonane przed zmianą podlegają zasadom obowiązującym w chwili dokonania, chyba że nowe postanowienia są korzystniejsze dla Klienta.",
+                  "obowiązuje od 5 sierpnia 2025r i jest dostępny do wglądu na stronie internetowej Studia oraz w siedzibie Studia. Studio może wprowadzać zmiany w Regulaminie – w przypadku istotnych zmian zostaną one ogłoszone na stronie internetowej Studia. Zmiany wchodzą w życie z dniem publikacji zaktualizowanego Regulaminu, chyba że określono inny termin. Rezerwacje dokonane przed zmianą Regulaminu podlegają zasadom obowiązującym w chwili ich dokonania, chyba że nowe postanowienia są korzystniejsze dla Klienta (w takim przypadku mogą być zastosowane za zgodą Klienta).",
                 ),
               ],
             },
             {
               content: [
+                t("W sprawach nieuregulowanych niniejszym "),
+                b("Regulaminem "),
                 t(
-                  "W sprawach nieuregulowanych Regulaminem zastosowanie mają przepisy prawa polskiego, w szczególności Kodeks Cywilny oraz ustawy o prawach konsumenta.",
+                  "zastosowanie mają odpowiednie przepisy prawa polskiego, w szczególności Kodeksu Cywilnego oraz ustawy o prawach konsumenta. Żadne z postanowień Regulaminu nie ma na celu ograniczenia praw konsumenta przysługujących mu z mocy prawa – w razie ewentualnej sprzeczności, pierwszeństwo mają przepisy powszechnie obowiązujące.",
                 ),
               ],
             },
             {
               content: [
+                t("Jeżeli jakiekolwiek postanowienie "),
+                b("Regulaminu "),
                 t(
-                  "Jeżeli jakiekolwiek postanowienie Regulaminu zostanie uznane za nieważne lub bezskuteczne, pozostałe pozostają w mocy.",
+                  "zostanie uznane za nieważne lub bezskuteczne w świetle prawa, pozostałe postanowienia Regulaminu pozostają w mocy. Nieważne postanowienie zostanie zastąpione normą prawną o najbliższym zbliżonym celu gospodarczym i intencji.",
                 ),
               ],
             },
             {
               content: [
+                b("Studio "),
                 t(
-                  "Studio dokłada starań, aby spory i nieporozumienia z Klientami rozwiązywać polubownie. W razie braku porozumienia, właściwy do rozstrzygania jest sąd powszechny według miejsca zamieszkania Klienta.",
+                  "dokłada wszelkich starań, aby spory i nieporozumienia z Klientami rozwiązywać polubownie i z poszanowaniem obustronnych interesów. W przypadku braku porozumienia, właściwym do rozstrzygania sporów będzie sąd powszechny miejscowo i rzeczowo właściwy zgodnie z obowiązującymi przepisami (dla konsumentów – może to być sąd właściwy według ich miejsca zamieszkania).",
                 ),
               ],
             },
             {
               content: [
+                t("Niniejszy "),
+                b("Regulamin "),
                 t(
-                  "Regulamin stanowi integralną część umowy o usługę tatuażu zawieranej pomiędzy Klientem a Studiem. Klient potwierdza zapoznanie się i akceptację z chwilą rezerwacji lub przystąpienia do zabiegu. Studio może odmówić wykonania usługi osobom, które nie zaakceptują Regulaminu.",
+                  "stanowi integralną część umowy o usługę tatuażu zawieranej pomiędzy Klientem a Studiem. Klient potwierdza zapoznanie się z Regulaminem i zobowiązuje się do jego przestrzegania z momentem dokonania rezerwacji lub przystąpienia do zabiegu. Studio zastrzega sobie prawo odmowy wykonania usługi osobom, które nie chcą zaakceptować warunków Regulaminu.",
                 ),
               ],
             },
             {
               content: [
+                t("Wszelkie pytania lub wątpliwości związane z niniejszym "),
+                b("Regulaminem "),
                 t(
-                  "Wszelkie pytania i wątpliwości należy kierować do Studia. Celem Studia jest zapewnienie bezpieczeństwa, higieny i satysfakcji usług.",
+                  "prosimy kierować do obsługi Studia – chętnie je wyjaśnimy. Studio pragnie zapewnić, że celem tych zasad jest zagwarantowanie bezpieczeństwa, higieny oraz satysfakcji obu stron procesu tatuowania. Dziękujemy za zaufanie i przestrzeganie powyższych postanowień – pozwala to nam tworzyć dla Państwa wyjątkowe tatuaże w komfortowych warunkach!",
                 ),
               ],
             },
